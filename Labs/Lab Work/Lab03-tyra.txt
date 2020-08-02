@@ -1,0 +1,1380 @@
+.headers on
+
+-- Name: Tyra Oberholzer
+-- File: Lab03-tyra.sql
+-- Date: July 16, 2020
+
+-- 1. What is the order number and the date of each order sold by each employee?
+
+select e.employeeid, e.firstname, e.lastname, o.orderid, o.orderdate from employees e join orders o on e.employeeid = o.employeeid order by e.lastname, e.firstname;
+EmployeeID|FirstName|LastName|OrderID|OrderDate
+5|Steven|Buchanan|10248|1996-07-04
+5|Steven|Buchanan|10254|1996-07-11
+5|Steven|Buchanan|10269|1996-07-31
+5|Steven|Buchanan|10297|1996-09-04
+5|Steven|Buchanan|10320|1996-10-03
+5|Steven|Buchanan|10333|1996-10-18
+5|Steven|Buchanan|10358|1996-11-20
+5|Steven|Buchanan|10359|1996-11-21
+5|Steven|Buchanan|10372|1996-12-04
+5|Steven|Buchanan|10378|1996-12-10
+5|Steven|Buchanan|10397|1996-12-27
+5|Steven|Buchanan|10463|1997-03-04
+5|Steven|Buchanan|10474|1997-03-13
+5|Steven|Buchanan|10477|1997-03-17
+5|Steven|Buchanan|10529|1997-05-07
+5|Steven|Buchanan|10549|1997-05-27
+5|Steven|Buchanan|10569|1997-06-16
+5|Steven|Buchanan|10575|1997-06-20
+5|Steven|Buchanan|10607|1997-07-22
+5|Steven|Buchanan|10648|1997-08-28
+5|Steven|Buchanan|10649|1997-08-28
+5|Steven|Buchanan|10650|1997-08-29
+5|Steven|Buchanan|10654|1997-09-02
+5|Steven|Buchanan|10675|1997-09-19
+5|Steven|Buchanan|10711|1997-10-21
+5|Steven|Buchanan|10714|1997-10-22
+5|Steven|Buchanan|10721|1997-10-29
+5|Steven|Buchanan|10730|1997-11-05
+5|Steven|Buchanan|10761|1997-12-02
+5|Steven|Buchanan|10812|1998-01-02
+5|Steven|Buchanan|10823|1998-01-09
+5|Steven|Buchanan|10841|1998-01-20
+5|Steven|Buchanan|10851|1998-01-26
+5|Steven|Buchanan|10866|1998-02-03
+5|Steven|Buchanan|10869|1998-02-04
+5|Steven|Buchanan|10870|1998-02-04
+5|Steven|Buchanan|10872|1998-02-05
+5|Steven|Buchanan|10874|1998-02-06
+5|Steven|Buchanan|10899|1998-02-20
+5|Steven|Buchanan|10922|1998-03-03
+5|Steven|Buchanan|10954|1998-03-17
+5|Steven|Buchanan|11043|1998-04-22
+8|Laura|Callahan|10262|1996-07-22
+8|Laura|Callahan|10268|1996-07-30
+8|Laura|Callahan|10276|1996-08-08
+8|Laura|Callahan|10278|1996-08-12
+8|Laura|Callahan|10279|1996-08-13
+8|Laura|Callahan|10286|1996-08-21
+8|Laura|Callahan|10287|1996-08-22
+8|Laura|Callahan|10290|1996-08-27
+8|Laura|Callahan|10301|1996-09-09
+8|Laura|Callahan|10305|1996-09-13
+8|Laura|Callahan|10310|1996-09-20
+8|Laura|Callahan|10318|1996-10-01
+8|Laura|Callahan|10334|1996-10-21
+8|Laura|Callahan|10354|1996-11-14
+8|Laura|Callahan|10366|1996-11-28
+8|Laura|Callahan|10369|1996-12-02
+8|Laura|Callahan|10380|1996-12-12
+8|Laura|Callahan|10383|1996-12-16
+8|Laura|Callahan|10399|1996-12-31
+8|Laura|Callahan|10402|1997-01-02
+8|Laura|Callahan|10408|1997-01-08
+8|Laura|Callahan|10412|1997-01-13
+8|Laura|Callahan|10416|1997-01-16
+8|Laura|Callahan|10421|1997-01-21
+8|Laura|Callahan|10435|1997-02-04
+8|Laura|Callahan|10437|1997-02-05
+8|Laura|Callahan|10443|1997-02-12
+8|Laura|Callahan|10450|1997-02-19
+8|Laura|Callahan|10452|1997-02-20
+8|Laura|Callahan|10455|1997-02-24
+8|Laura|Callahan|10456|1997-02-25
+8|Laura|Callahan|10460|1997-02-28
+8|Laura|Callahan|10467|1997-03-06
+8|Laura|Callahan|10472|1997-03-12
+8|Laura|Callahan|10476|1997-03-17
+8|Laura|Callahan|10481|1997-03-20
+8|Laura|Callahan|10488|1997-03-27
+8|Laura|Callahan|10491|1997-03-31
+8|Laura|Callahan|10498|1997-04-07
+8|Laura|Callahan|10521|1997-04-29
+8|Laura|Callahan|10533|1997-05-12
+8|Laura|Callahan|10534|1997-05-12
+8|Laura|Callahan|10543|1997-05-21
+8|Laura|Callahan|10545|1997-05-22
+8|Laura|Callahan|10560|1997-06-06
+8|Laura|Callahan|10565|1997-06-11
+8|Laura|Callahan|10571|1997-06-17
+8|Laura|Callahan|10589|1997-07-04
+8|Laura|Callahan|10596|1997-07-11
+8|Laura|Callahan|10602|1997-07-17
+8|Laura|Callahan|10603|1997-07-18
+8|Laura|Callahan|10610|1997-07-25
+8|Laura|Callahan|10614|1997-07-29
+8|Laura|Callahan|10623|1997-08-07
+8|Laura|Callahan|10627|1997-08-11
+8|Laura|Callahan|10631|1997-08-14
+8|Laura|Callahan|10632|1997-08-14
+8|Laura|Callahan|10635|1997-08-18
+8|Laura|Callahan|10651|1997-09-01
+8|Laura|Callahan|10660|1997-09-08
+8|Laura|Callahan|10679|1997-09-23
+8|Laura|Callahan|10694|1997-10-06
+8|Laura|Callahan|10696|1997-10-08
+8|Laura|Callahan|10706|1997-10-16
+8|Laura|Callahan|10719|1997-10-27
+8|Laura|Callahan|10720|1997-10-28
+8|Laura|Callahan|10722|1997-10-29
+8|Laura|Callahan|10724|1997-10-30
+8|Laura|Callahan|10729|1997-11-04
+8|Laura|Callahan|10756|1997-11-27
+8|Laura|Callahan|10770|1997-12-09
+8|Laura|Callahan|10786|1997-12-19
+8|Laura|Callahan|10795|1997-12-24
+8|Laura|Callahan|10811|1998-01-02
+8|Laura|Callahan|10824|1998-01-09
+8|Laura|Callahan|10844|1998-01-21
+8|Laura|Callahan|10845|1998-01-21
+8|Laura|Callahan|10852|1998-01-26
+8|Laura|Callahan|10857|1998-01-28
+8|Laura|Callahan|10862|1998-01-30
+8|Laura|Callahan|10883|1998-02-12
+8|Laura|Callahan|10887|1998-02-13
+8|Laura|Callahan|10932|1998-03-06
+8|Laura|Callahan|10940|1998-03-11
+8|Laura|Callahan|10955|1998-03-17
+8|Laura|Callahan|10957|1998-03-18
+8|Laura|Callahan|10961|1998-03-19
+8|Laura|Callahan|10962|1998-03-19
+8|Laura|Callahan|10977|1998-03-26
+8|Laura|Callahan|10979|1998-03-26
+8|Laura|Callahan|10986|1998-03-30
+8|Laura|Callahan|10987|1998-03-31
+8|Laura|Callahan|10997|1998-04-03
+8|Laura|Callahan|10998|1998-04-03
+8|Laura|Callahan|11007|1998-04-08
+8|Laura|Callahan|11034|1998-04-20
+8|Laura|Callahan|11036|1998-04-20
+8|Laura|Callahan|11046|1998-04-23
+8|Laura|Callahan|11050|1998-04-27
+8|Laura|Callahan|11054|1998-04-28
+8|Laura|Callahan|11056|1998-04-28
+8|Laura|Callahan|11065|1998-05-01
+8|Laura|Callahan|11068|1998-05-04
+8|Laura|Callahan|11075|1998-05-06
+1|Nancy|Davolio|10258|1996-07-17
+1|Nancy|Davolio|10270|1996-08-01
+1|Nancy|Davolio|10275|1996-08-07
+1|Nancy|Davolio|10285|1996-08-20
+1|Nancy|Davolio|10292|1996-08-28
+1|Nancy|Davolio|10293|1996-08-29
+1|Nancy|Davolio|10304|1996-09-12
+1|Nancy|Davolio|10306|1996-09-16
+1|Nancy|Davolio|10311|1996-09-20
+1|Nancy|Davolio|10314|1996-09-25
+1|Nancy|Davolio|10316|1996-09-27
+1|Nancy|Davolio|10325|1996-10-09
+1|Nancy|Davolio|10340|1996-10-29
+1|Nancy|Davolio|10351|1996-11-11
+1|Nancy|Davolio|10357|1996-11-19
+1|Nancy|Davolio|10361|1996-11-22
+1|Nancy|Davolio|10364|1996-11-26
+1|Nancy|Davolio|10371|1996-12-03
+1|Nancy|Davolio|10374|1996-12-05
+1|Nancy|Davolio|10376|1996-12-09
+1|Nancy|Davolio|10377|1996-12-09
+1|Nancy|Davolio|10385|1996-12-17
+1|Nancy|Davolio|10387|1996-12-18
+1|Nancy|Davolio|10393|1996-12-25
+1|Nancy|Davolio|10394|1996-12-25
+1|Nancy|Davolio|10396|1996-12-27
+1|Nancy|Davolio|10400|1997-01-01
+1|Nancy|Davolio|10401|1997-01-01
+1|Nancy|Davolio|10405|1997-01-06
+1|Nancy|Davolio|10453|1997-02-21
+1|Nancy|Davolio|10461|1997-02-28
+1|Nancy|Davolio|10465|1997-03-05
+1|Nancy|Davolio|10469|1997-03-10
+1|Nancy|Davolio|10473|1997-03-13
+1|Nancy|Davolio|10482|1997-03-21
+1|Nancy|Davolio|10486|1997-03-26
+1|Nancy|Davolio|10508|1997-04-16
+1|Nancy|Davolio|10524|1997-05-01
+1|Nancy|Davolio|10525|1997-05-02
+1|Nancy|Davolio|10537|1997-05-14
+1|Nancy|Davolio|10542|1997-05-20
+1|Nancy|Davolio|10546|1997-05-23
+1|Nancy|Davolio|10558|1997-06-04
+1|Nancy|Davolio|10562|1997-06-09
+1|Nancy|Davolio|10567|1997-06-12
+1|Nancy|Davolio|10579|1997-06-25
+1|Nancy|Davolio|10587|1997-07-02
+1|Nancy|Davolio|10591|1997-07-07
+1|Nancy|Davolio|10598|1997-07-14
+1|Nancy|Davolio|10604|1997-07-18
+1|Nancy|Davolio|10605|1997-07-21
+1|Nancy|Davolio|10612|1997-07-28
+1|Nancy|Davolio|10616|1997-07-31
+1|Nancy|Davolio|10618|1997-08-01
+1|Nancy|Davolio|10626|1997-08-11
+1|Nancy|Davolio|10630|1997-08-13
+1|Nancy|Davolio|10653|1997-09-02
+1|Nancy|Davolio|10655|1997-09-03
+1|Nancy|Davolio|10664|1997-09-10
+1|Nancy|Davolio|10665|1997-09-11
+1|Nancy|Davolio|10668|1997-09-15
+1|Nancy|Davolio|10671|1997-09-17
+1|Nancy|Davolio|10677|1997-09-22
+1|Nancy|Davolio|10680|1997-09-24
+1|Nancy|Davolio|10689|1997-10-01
+1|Nancy|Davolio|10690|1997-10-02
+1|Nancy|Davolio|10709|1997-10-17
+1|Nancy|Davolio|10710|1997-10-20
+1|Nancy|Davolio|10713|1997-10-22
+1|Nancy|Davolio|10717|1997-10-24
+1|Nancy|Davolio|10718|1997-10-27
+1|Nancy|Davolio|10733|1997-11-07
+1|Nancy|Davolio|10743|1997-11-17
+1|Nancy|Davolio|10746|1997-11-19
+1|Nancy|Davolio|10773|1997-12-11
+1|Nancy|Davolio|10776|1997-12-15
+1|Nancy|Davolio|10785|1997-12-18
+1|Nancy|Davolio|10788|1997-12-22
+1|Nancy|Davolio|10789|1997-12-22
+1|Nancy|Davolio|10792|1997-12-23
+1|Nancy|Davolio|10800|1997-12-26
+1|Nancy|Davolio|10813|1998-01-05
+1|Nancy|Davolio|10821|1998-01-08
+1|Nancy|Davolio|10825|1998-01-09
+1|Nancy|Davolio|10827|1998-01-12
+1|Nancy|Davolio|10834|1998-01-15
+1|Nancy|Davolio|10835|1998-01-15
+1|Nancy|Davolio|10842|1998-01-20
+1|Nancy|Davolio|10850|1998-01-23
+1|Nancy|Davolio|10859|1998-01-29
+1|Nancy|Davolio|10877|1998-02-09
+1|Nancy|Davolio|10886|1998-02-13
+1|Nancy|Davolio|10888|1998-02-16
+1|Nancy|Davolio|10894|1998-02-18
+1|Nancy|Davolio|10900|1998-02-20
+1|Nancy|Davolio|10902|1998-02-23
+1|Nancy|Davolio|10909|1998-02-26
+1|Nancy|Davolio|10910|1998-02-26
+1|Nancy|Davolio|10916|1998-02-27
+1|Nancy|Davolio|10921|1998-03-03
+1|Nancy|Davolio|10928|1998-03-05
+1|Nancy|Davolio|10946|1998-03-12
+1|Nancy|Davolio|10950|1998-03-16
+1|Nancy|Davolio|10952|1998-03-16
+1|Nancy|Davolio|10968|1998-03-23
+1|Nancy|Davolio|10969|1998-03-23
+1|Nancy|Davolio|10975|1998-03-25
+1|Nancy|Davolio|10976|1998-03-25
+1|Nancy|Davolio|10981|1998-03-27
+1|Nancy|Davolio|10984|1998-03-30
+1|Nancy|Davolio|10991|1998-04-01
+1|Nancy|Davolio|10992|1998-04-01
+1|Nancy|Davolio|10995|1998-04-02
+1|Nancy|Davolio|11012|1998-04-09
+1|Nancy|Davolio|11023|1998-04-14
+1|Nancy|Davolio|11027|1998-04-16
+1|Nancy|Davolio|11038|1998-04-21
+1|Nancy|Davolio|11039|1998-04-21
+1|Nancy|Davolio|11064|1998-05-01
+1|Nancy|Davolio|11067|1998-05-04
+1|Nancy|Davolio|11069|1998-05-04
+1|Nancy|Davolio|11071|1998-05-05
+1|Nancy|Davolio|11077|1998-05-06
+9|Anne|Dodsworth|10255|1996-07-12
+9|Anne|Dodsworth|10263|1996-07-23
+9|Anne|Dodsworth|10324|1996-10-08
+9|Anne|Dodsworth|10331|1996-10-16
+9|Anne|Dodsworth|10386|1996-12-18
+9|Anne|Dodsworth|10411|1997-01-10
+9|Anne|Dodsworth|10475|1997-03-14
+9|Anne|Dodsworth|10501|1997-04-09
+9|Anne|Dodsworth|10506|1997-04-15
+9|Anne|Dodsworth|10538|1997-05-15
+9|Anne|Dodsworth|10557|1997-06-03
+9|Anne|Dodsworth|10566|1997-06-12
+9|Anne|Dodsworth|10577|1997-06-23
+9|Anne|Dodsworth|10586|1997-07-02
+9|Anne|Dodsworth|10646|1997-08-27
+9|Anne|Dodsworth|10672|1997-09-17
+9|Anne|Dodsworth|10687|1997-09-30
+9|Anne|Dodsworth|10705|1997-10-15
+9|Anne|Dodsworth|10736|1997-11-11
+9|Anne|Dodsworth|10745|1997-11-18
+9|Anne|Dodsworth|10750|1997-11-21
+9|Anne|Dodsworth|10771|1997-12-10
+9|Anne|Dodsworth|10782|1997-12-17
+9|Anne|Dodsworth|10799|1997-12-26
+9|Anne|Dodsworth|10828|1998-01-13
+9|Anne|Dodsworth|10829|1998-01-13
+9|Anne|Dodsworth|10837|1998-01-16
+9|Anne|Dodsworth|10849|1998-01-23
+9|Anne|Dodsworth|10853|1998-01-27
+9|Anne|Dodsworth|10871|1998-02-05
+9|Anne|Dodsworth|10889|1998-02-16
+9|Anne|Dodsworth|10893|1998-02-18
+9|Anne|Dodsworth|10905|1998-02-24
+9|Anne|Dodsworth|10942|1998-03-11
+9|Anne|Dodsworth|10951|1998-03-16
+9|Anne|Dodsworth|10953|1998-03-16
+9|Anne|Dodsworth|10963|1998-03-19
+9|Anne|Dodsworth|10970|1998-03-24
+9|Anne|Dodsworth|10978|1998-03-26
+9|Anne|Dodsworth|11016|1998-04-10
+9|Anne|Dodsworth|11017|1998-04-13
+9|Anne|Dodsworth|11022|1998-04-14
+9|Anne|Dodsworth|11058|1998-04-29
+2|Andrew|Fuller|10265|1996-07-25
+2|Andrew|Fuller|10277|1996-08-09
+2|Andrew|Fuller|10280|1996-08-14
+2|Andrew|Fuller|10295|1996-09-02
+2|Andrew|Fuller|10300|1996-09-09
+2|Andrew|Fuller|10307|1996-09-17
+2|Andrew|Fuller|10312|1996-09-23
+2|Andrew|Fuller|10313|1996-09-24
+2|Andrew|Fuller|10327|1996-10-11
+2|Andrew|Fuller|10339|1996-10-28
+2|Andrew|Fuller|10345|1996-11-04
+2|Andrew|Fuller|10368|1996-11-29
+2|Andrew|Fuller|10379|1996-12-11
+2|Andrew|Fuller|10388|1996-12-19
+2|Andrew|Fuller|10392|1996-12-24
+2|Andrew|Fuller|10398|1996-12-30
+2|Andrew|Fuller|10404|1997-01-03
+2|Andrew|Fuller|10407|1997-01-07
+2|Andrew|Fuller|10414|1997-01-14
+2|Andrew|Fuller|10422|1997-01-22
+2|Andrew|Fuller|10457|1997-02-25
+2|Andrew|Fuller|10462|1997-03-03
+2|Andrew|Fuller|10471|1997-03-11
+2|Andrew|Fuller|10478|1997-03-18
+2|Andrew|Fuller|10487|1997-03-26
+2|Andrew|Fuller|10502|1997-04-10
+2|Andrew|Fuller|10515|1997-04-23
+2|Andrew|Fuller|10516|1997-04-24
+2|Andrew|Fuller|10541|1997-05-19
+2|Andrew|Fuller|10552|1997-05-29
+2|Andrew|Fuller|10553|1997-05-30
+2|Andrew|Fuller|10556|1997-06-03
+2|Andrew|Fuller|10561|1997-06-06
+2|Andrew|Fuller|10563|1997-06-10
+2|Andrew|Fuller|10583|1997-06-30
+2|Andrew|Fuller|10588|1997-07-03
+2|Andrew|Fuller|10595|1997-07-10
+2|Andrew|Fuller|10615|1997-07-30
+2|Andrew|Fuller|10620|1997-08-05
+2|Andrew|Fuller|10657|1997-09-04
+2|Andrew|Fuller|10663|1997-09-10
+2|Andrew|Fuller|10669|1997-09-15
+2|Andrew|Fuller|10673|1997-09-18
+2|Andrew|Fuller|10676|1997-09-22
+2|Andrew|Fuller|10683|1997-09-26
+2|Andrew|Fuller|10686|1997-09-30
+2|Andrew|Fuller|10691|1997-10-03
+2|Andrew|Fuller|10727|1997-11-03
+2|Andrew|Fuller|10734|1997-11-07
+2|Andrew|Fuller|10737|1997-11-11
+2|Andrew|Fuller|10738|1997-11-12
+2|Andrew|Fuller|10752|1997-11-24
+2|Andrew|Fuller|10780|1997-12-16
+2|Andrew|Fuller|10781|1997-12-17
+2|Andrew|Fuller|10787|1997-12-19
+2|Andrew|Fuller|10798|1997-12-26
+2|Andrew|Fuller|10805|1997-12-30
+2|Andrew|Fuller|10808|1998-01-01
+2|Andrew|Fuller|10810|1998-01-01
+2|Andrew|Fuller|10815|1998-01-05
+2|Andrew|Fuller|10819|1998-01-07
+2|Andrew|Fuller|10832|1998-01-14
+2|Andrew|Fuller|10846|1998-01-22
+2|Andrew|Fuller|10858|1998-01-29
+2|Andrew|Fuller|10865|1998-02-02
+2|Andrew|Fuller|10912|1998-02-26
+2|Andrew|Fuller|10915|1998-02-27
+2|Andrew|Fuller|10919|1998-03-02
+2|Andrew|Fuller|10939|1998-03-10
+2|Andrew|Fuller|10949|1998-03-13
+2|Andrew|Fuller|10967|1998-03-23
+2|Andrew|Fuller|10971|1998-03-24
+2|Andrew|Fuller|10982|1998-03-27
+2|Andrew|Fuller|10983|1998-03-27
+2|Andrew|Fuller|10985|1998-03-30
+2|Andrew|Fuller|10989|1998-03-31
+2|Andrew|Fuller|10990|1998-04-01
+2|Andrew|Fuller|10994|1998-04-02
+2|Andrew|Fuller|11000|1998-04-06
+2|Andrew|Fuller|11001|1998-04-06
+2|Andrew|Fuller|11005|1998-04-07
+2|Andrew|Fuller|11009|1998-04-08
+2|Andrew|Fuller|11010|1998-04-09
+2|Andrew|Fuller|11013|1998-04-09
+2|Andrew|Fuller|11014|1998-04-10
+2|Andrew|Fuller|11015|1998-04-10
+2|Andrew|Fuller|11020|1998-04-14
+2|Andrew|Fuller|11028|1998-04-16
+2|Andrew|Fuller|11032|1998-04-17
+2|Andrew|Fuller|11035|1998-04-20
+2|Andrew|Fuller|11042|1998-04-22
+2|Andrew|Fuller|11053|1998-04-27
+2|Andrew|Fuller|11059|1998-04-29
+2|Andrew|Fuller|11060|1998-04-30
+2|Andrew|Fuller|11070|1998-05-05
+2|Andrew|Fuller|11073|1998-05-05
+7|Robert|King|10289|1996-08-26
+7|Robert|King|10303|1996-09-11
+7|Robert|King|10308|1996-09-18
+7|Robert|King|10319|1996-10-02
+7|Robert|King|10322|1996-10-04
+7|Robert|King|10335|1996-10-22
+7|Robert|King|10336|1996-10-23
+7|Robert|King|10341|1996-10-29
+7|Robert|King|10349|1996-11-08
+7|Robert|King|10353|1996-11-13
+7|Robert|King|10367|1996-11-28
+7|Robert|King|10406|1997-01-07
+7|Robert|King|10424|1997-01-23
+7|Robert|King|10428|1997-01-28
+7|Robert|King|10458|1997-02-26
+7|Robert|King|10483|1997-03-24
+7|Robert|King|10490|1997-03-31
+7|Robert|King|10496|1997-04-04
+7|Robert|King|10497|1997-04-04
+7|Robert|King|10507|1997-04-15
+7|Robert|King|10512|1997-04-21
+7|Robert|King|10513|1997-04-22
+7|Robert|King|10520|1997-04-29
+7|Robert|King|10523|1997-05-01
+7|Robert|King|10527|1997-05-05
+7|Robert|King|10531|1997-05-08
+7|Robert|King|10532|1997-05-09
+7|Robert|King|10550|1997-05-28
+7|Robert|King|10573|1997-06-19
+7|Robert|King|10585|1997-07-01
+7|Robert|King|10593|1997-07-09
+7|Robert|King|10597|1997-07-11
+7|Robert|King|10601|1997-07-16
+7|Robert|King|10609|1997-07-24
+7|Robert|King|10633|1997-08-15
+7|Robert|King|10639|1997-08-20
+7|Robert|King|10642|1997-08-22
+7|Robert|King|10659|1997-09-05
+7|Robert|King|10661|1997-09-09
+7|Robert|King|10666|1997-09-12
+7|Robert|King|10667|1997-09-12
+7|Robert|King|10678|1997-09-23
+7|Robert|King|10695|1997-10-07
+7|Robert|King|10731|1997-11-06
+7|Robert|King|10775|1997-12-12
+7|Robert|King|10777|1997-12-15
+7|Robert|King|10797|1997-12-25
+7|Robert|King|10809|1998-01-01
+7|Robert|King|10818|1998-01-07
+7|Robert|King|10836|1998-01-16
+7|Robert|King|10848|1998-01-23
+7|Robert|King|10868|1998-02-04
+7|Robert|King|10876|1998-02-09
+7|Robert|King|10880|1998-02-10
+7|Robert|King|10890|1998-02-16
+7|Robert|King|10891|1998-02-17
+7|Robert|King|10896|1998-02-19
+7|Robert|King|10923|1998-03-03
+7|Robert|King|10937|1998-03-10
+7|Robert|King|10941|1998-03-11
+7|Robert|King|10958|1998-03-18
+7|Robert|King|10993|1998-04-01
+7|Robert|King|11008|1998-04-08
+7|Robert|King|11030|1998-04-17
+7|Robert|King|11033|1998-04-17
+7|Robert|King|11037|1998-04-21
+7|Robert|King|11047|1998-04-24
+7|Robert|King|11048|1998-04-24
+7|Robert|King|11051|1998-04-27
+7|Robert|King|11055|1998-04-28
+7|Robert|King|11066|1998-05-01
+7|Robert|King|11074|1998-05-06
+3|Janet|Leverling|10251|1996-07-08
+3|Janet|Leverling|10253|1996-07-10
+3|Janet|Leverling|10256|1996-07-15
+3|Janet|Leverling|10266|1996-07-26
+3|Janet|Leverling|10273|1996-08-05
+3|Janet|Leverling|10283|1996-08-16
+3|Janet|Leverling|10309|1996-09-19
+3|Janet|Leverling|10321|1996-10-03
+3|Janet|Leverling|10330|1996-10-16
+3|Janet|Leverling|10332|1996-10-17
+3|Janet|Leverling|10346|1996-11-05
+3|Janet|Leverling|10352|1996-11-12
+3|Janet|Leverling|10362|1996-11-25
+3|Janet|Leverling|10365|1996-11-27
+3|Janet|Leverling|10375|1996-12-06
+3|Janet|Leverling|10381|1996-12-12
+3|Janet|Leverling|10384|1996-12-16
+3|Janet|Leverling|10391|1996-12-23
+3|Janet|Leverling|10409|1997-01-09
+3|Janet|Leverling|10410|1997-01-10
+3|Janet|Leverling|10413|1997-01-14
+3|Janet|Leverling|10415|1997-01-15
+3|Janet|Leverling|10420|1997-01-21
+3|Janet|Leverling|10429|1997-01-29
+3|Janet|Leverling|10432|1997-01-31
+3|Janet|Leverling|10433|1997-02-03
+3|Janet|Leverling|10434|1997-02-03
+3|Janet|Leverling|10436|1997-02-05
+3|Janet|Leverling|10438|1997-02-06
+3|Janet|Leverling|10441|1997-02-10
+3|Janet|Leverling|10442|1997-02-11
+3|Janet|Leverling|10444|1997-02-12
+3|Janet|Leverling|10445|1997-02-13
+3|Janet|Leverling|10449|1997-02-18
+3|Janet|Leverling|10468|1997-03-07
+3|Janet|Leverling|10479|1997-03-19
+3|Janet|Leverling|10484|1997-03-24
+3|Janet|Leverling|10492|1997-04-01
+3|Janet|Leverling|10495|1997-04-03
+3|Janet|Leverling|10505|1997-04-14
+3|Janet|Leverling|10514|1997-04-22
+3|Janet|Leverling|10517|1997-04-24
+3|Janet|Leverling|10530|1997-05-08
+3|Janet|Leverling|10536|1997-05-14
+3|Janet|Leverling|10540|1997-05-19
+3|Janet|Leverling|10547|1997-05-23
+3|Janet|Leverling|10548|1997-05-26
+3|Janet|Leverling|10568|1997-06-13
+3|Janet|Leverling|10570|1997-06-17
+3|Janet|Leverling|10572|1997-06-18
+3|Janet|Leverling|10576|1997-06-23
+3|Janet|Leverling|10581|1997-06-26
+3|Janet|Leverling|10582|1997-06-27
+3|Janet|Leverling|10592|1997-07-08
+3|Janet|Leverling|10594|1997-07-09
+3|Janet|Leverling|10619|1997-08-04
+3|Janet|Leverling|10625|1997-08-08
+3|Janet|Leverling|10638|1997-08-20
+3|Janet|Leverling|10644|1997-08-25
+3|Janet|Leverling|10662|1997-09-09
+3|Janet|Leverling|10681|1997-09-25
+3|Janet|Leverling|10682|1997-09-25
+3|Janet|Leverling|10684|1997-09-26
+3|Janet|Leverling|10693|1997-10-06
+3|Janet|Leverling|10697|1997-10-08
+3|Janet|Leverling|10699|1997-10-09
+3|Janet|Leverling|10700|1997-10-10
+3|Janet|Leverling|10712|1997-10-21
+3|Janet|Leverling|10715|1997-10-23
+3|Janet|Leverling|10723|1997-10-30
+3|Janet|Leverling|10732|1997-11-06
+3|Janet|Leverling|10739|1997-11-12
+3|Janet|Leverling|10742|1997-11-14
+3|Janet|Leverling|10748|1997-11-20
+3|Janet|Leverling|10751|1997-11-24
+3|Janet|Leverling|10753|1997-11-25
+3|Janet|Leverling|10758|1997-11-28
+3|Janet|Leverling|10759|1997-11-28
+3|Janet|Leverling|10762|1997-12-02
+3|Janet|Leverling|10763|1997-12-03
+3|Janet|Leverling|10765|1997-12-04
+3|Janet|Leverling|10768|1997-12-08
+3|Janet|Leverling|10769|1997-12-08
+3|Janet|Leverling|10772|1997-12-10
+3|Janet|Leverling|10778|1997-12-16
+3|Janet|Leverling|10779|1997-12-16
+3|Janet|Leverling|10793|1997-12-24
+3|Janet|Leverling|10796|1997-12-25
+3|Janet|Leverling|10806|1997-12-31
+3|Janet|Leverling|10814|1998-01-05
+3|Janet|Leverling|10817|1998-01-06
+3|Janet|Leverling|10820|1998-01-07
+3|Janet|Leverling|10831|1998-01-14
+3|Janet|Leverling|10838|1998-01-19
+3|Janet|Leverling|10839|1998-01-19
+3|Janet|Leverling|10854|1998-01-27
+3|Janet|Leverling|10855|1998-01-27
+3|Janet|Leverling|10856|1998-01-28
+3|Janet|Leverling|10860|1998-01-29
+3|Janet|Leverling|10879|1998-02-10
+3|Janet|Leverling|10895|1998-02-18
+3|Janet|Leverling|10897|1998-02-19
+3|Janet|Leverling|10903|1998-02-24
+3|Janet|Leverling|10904|1998-02-24
+3|Janet|Leverling|10911|1998-02-26
+3|Janet|Leverling|10918|1998-03-02
+3|Janet|Leverling|10924|1998-03-04
+3|Janet|Leverling|10925|1998-03-04
+3|Janet|Leverling|10934|1998-03-09
+3|Janet|Leverling|10936|1998-03-09
+3|Janet|Leverling|10938|1998-03-10
+3|Janet|Leverling|10947|1998-03-13
+3|Janet|Leverling|10948|1998-03-13
+3|Janet|Leverling|10960|1998-03-19
+3|Janet|Leverling|10964|1998-03-20
+3|Janet|Leverling|10974|1998-03-25
+3|Janet|Leverling|10988|1998-03-31
+3|Janet|Leverling|11003|1998-04-06
+3|Janet|Leverling|11004|1998-04-07
+3|Janet|Leverling|11006|1998-04-07
+3|Janet|Leverling|11011|1998-04-09
+3|Janet|Leverling|11021|1998-04-14
+3|Janet|Leverling|11041|1998-04-22
+3|Janet|Leverling|11049|1998-04-24
+3|Janet|Leverling|11052|1998-04-27
+3|Janet|Leverling|11057|1998-04-29
+3|Janet|Leverling|11063|1998-04-30
+4|Margaret|Peacock|10250|1996-07-08
+4|Margaret|Peacock|10252|1996-07-09
+4|Margaret|Peacock|10257|1996-07-16
+4|Margaret|Peacock|10259|1996-07-18
+4|Margaret|Peacock|10260|1996-07-19
+4|Margaret|Peacock|10261|1996-07-19
+4|Margaret|Peacock|10267|1996-07-29
+4|Margaret|Peacock|10281|1996-08-14
+4|Margaret|Peacock|10282|1996-08-15
+4|Margaret|Peacock|10284|1996-08-19
+4|Margaret|Peacock|10288|1996-08-23
+4|Margaret|Peacock|10294|1996-08-30
+4|Margaret|Peacock|10299|1996-09-06
+4|Margaret|Peacock|10302|1996-09-10
+4|Margaret|Peacock|10315|1996-09-26
+4|Margaret|Peacock|10323|1996-10-07
+4|Margaret|Peacock|10326|1996-10-10
+4|Margaret|Peacock|10328|1996-10-14
+4|Margaret|Peacock|10329|1996-10-15
+4|Margaret|Peacock|10337|1996-10-24
+4|Margaret|Peacock|10338|1996-10-25
+4|Margaret|Peacock|10342|1996-10-30
+4|Margaret|Peacock|10343|1996-10-31
+4|Margaret|Peacock|10344|1996-11-01
+4|Margaret|Peacock|10347|1996-11-06
+4|Margaret|Peacock|10348|1996-11-07
+4|Margaret|Peacock|10360|1996-11-22
+4|Margaret|Peacock|10363|1996-11-26
+4|Margaret|Peacock|10373|1996-12-05
+4|Margaret|Peacock|10382|1996-12-13
+4|Margaret|Peacock|10389|1996-12-20
+4|Margaret|Peacock|10403|1997-01-03
+4|Margaret|Peacock|10417|1997-01-16
+4|Margaret|Peacock|10418|1997-01-17
+4|Margaret|Peacock|10419|1997-01-20
+4|Margaret|Peacock|10426|1997-01-27
+4|Margaret|Peacock|10427|1997-01-27
+4|Margaret|Peacock|10430|1997-01-30
+4|Margaret|Peacock|10431|1997-01-30
+4|Margaret|Peacock|10440|1997-02-10
+4|Margaret|Peacock|10447|1997-02-14
+4|Margaret|Peacock|10448|1997-02-17
+4|Margaret|Peacock|10451|1997-02-19
+4|Margaret|Peacock|10454|1997-02-21
+4|Margaret|Peacock|10459|1997-02-27
+4|Margaret|Peacock|10464|1997-03-04
+4|Margaret|Peacock|10466|1997-03-06
+4|Margaret|Peacock|10470|1997-03-11
+4|Margaret|Peacock|10485|1997-03-25
+4|Margaret|Peacock|10493|1997-04-02
+4|Margaret|Peacock|10494|1997-04-02
+4|Margaret|Peacock|10499|1997-04-08
+4|Margaret|Peacock|10504|1997-04-11
+4|Margaret|Peacock|10509|1997-04-17
+4|Margaret|Peacock|10511|1997-04-18
+4|Margaret|Peacock|10518|1997-04-25
+4|Margaret|Peacock|10522|1997-04-30
+4|Margaret|Peacock|10526|1997-05-05
+4|Margaret|Peacock|10535|1997-05-13
+4|Margaret|Peacock|10544|1997-05-21
+4|Margaret|Peacock|10551|1997-05-28
+4|Margaret|Peacock|10554|1997-05-30
+4|Margaret|Peacock|10564|1997-06-10
+4|Margaret|Peacock|10574|1997-06-19
+4|Margaret|Peacock|10578|1997-06-24
+4|Margaret|Peacock|10580|1997-06-26
+4|Margaret|Peacock|10584|1997-06-30
+4|Margaret|Peacock|10590|1997-07-07
+4|Margaret|Peacock|10600|1997-07-16
+4|Margaret|Peacock|10606|1997-07-22
+4|Margaret|Peacock|10608|1997-07-23
+4|Margaret|Peacock|10613|1997-07-29
+4|Margaret|Peacock|10617|1997-07-31
+4|Margaret|Peacock|10621|1997-08-05
+4|Margaret|Peacock|10622|1997-08-06
+4|Margaret|Peacock|10624|1997-08-07
+4|Margaret|Peacock|10628|1997-08-12
+4|Margaret|Peacock|10629|1997-08-12
+4|Margaret|Peacock|10634|1997-08-15
+4|Margaret|Peacock|10636|1997-08-19
+4|Margaret|Peacock|10640|1997-08-21
+4|Margaret|Peacock|10641|1997-08-22
+4|Margaret|Peacock|10645|1997-08-26
+4|Margaret|Peacock|10647|1997-08-27
+4|Margaret|Peacock|10652|1997-09-01
+4|Margaret|Peacock|10658|1997-09-05
+4|Margaret|Peacock|10670|1997-09-16
+4|Margaret|Peacock|10674|1997-09-18
+4|Margaret|Peacock|10685|1997-09-29
+4|Margaret|Peacock|10688|1997-10-01
+4|Margaret|Peacock|10692|1997-10-03
+4|Margaret|Peacock|10698|1997-10-09
+4|Margaret|Peacock|10702|1997-10-13
+4|Margaret|Peacock|10707|1997-10-16
+4|Margaret|Peacock|10716|1997-10-24
+4|Margaret|Peacock|10725|1997-10-31
+4|Margaret|Peacock|10726|1997-11-03
+4|Margaret|Peacock|10728|1997-11-04
+4|Margaret|Peacock|10740|1997-11-13
+4|Margaret|Peacock|10741|1997-11-14
+4|Margaret|Peacock|10749|1997-11-20
+4|Margaret|Peacock|10755|1997-11-26
+4|Margaret|Peacock|10760|1997-12-01
+4|Margaret|Peacock|10766|1997-12-05
+4|Margaret|Peacock|10767|1997-12-05
+4|Margaret|Peacock|10774|1997-12-11
+4|Margaret|Peacock|10783|1997-12-18
+4|Margaret|Peacock|10784|1997-12-18
+4|Margaret|Peacock|10801|1997-12-29
+4|Margaret|Peacock|10802|1997-12-29
+4|Margaret|Peacock|10803|1997-12-30
+4|Margaret|Peacock|10807|1997-12-31
+4|Margaret|Peacock|10816|1998-01-06
+4|Margaret|Peacock|10830|1998-01-13
+4|Margaret|Peacock|10840|1998-01-19
+4|Margaret|Peacock|10843|1998-01-21
+4|Margaret|Peacock|10847|1998-01-22
+4|Margaret|Peacock|10861|1998-01-30
+4|Margaret|Peacock|10863|1998-02-02
+4|Margaret|Peacock|10864|1998-02-02
+4|Margaret|Peacock|10873|1998-02-06
+4|Margaret|Peacock|10875|1998-02-06
+4|Margaret|Peacock|10878|1998-02-10
+4|Margaret|Peacock|10881|1998-02-11
+4|Margaret|Peacock|10882|1998-02-11
+4|Margaret|Peacock|10884|1998-02-12
+4|Margaret|Peacock|10892|1998-02-17
+4|Margaret|Peacock|10898|1998-02-20
+4|Margaret|Peacock|10901|1998-02-23
+4|Margaret|Peacock|10906|1998-02-25
+4|Margaret|Peacock|10908|1998-02-26
+4|Margaret|Peacock|10913|1998-02-26
+4|Margaret|Peacock|10917|1998-03-02
+4|Margaret|Peacock|10920|1998-03-03
+4|Margaret|Peacock|10926|1998-03-04
+4|Margaret|Peacock|10927|1998-03-05
+4|Margaret|Peacock|10930|1998-03-06
+4|Margaret|Peacock|10931|1998-03-06
+4|Margaret|Peacock|10935|1998-03-09
+4|Margaret|Peacock|10943|1998-03-11
+4|Margaret|Peacock|10945|1998-03-12
+4|Margaret|Peacock|10966|1998-03-20
+4|Margaret|Peacock|10972|1998-03-24
+4|Margaret|Peacock|10980|1998-03-27
+4|Margaret|Peacock|10996|1998-04-02
+4|Margaret|Peacock|11002|1998-04-06
+4|Margaret|Peacock|11018|1998-04-13
+4|Margaret|Peacock|11024|1998-04-15
+4|Margaret|Peacock|11026|1998-04-15
+4|Margaret|Peacock|11029|1998-04-16
+4|Margaret|Peacock|11040|1998-04-22
+4|Margaret|Peacock|11044|1998-04-23
+4|Margaret|Peacock|11061|1998-04-30
+4|Margaret|Peacock|11062|1998-04-30
+4|Margaret|Peacock|11072|1998-05-05
+4|Margaret|Peacock|11076|1998-05-06
+6|Michael|Suyama|10249|1996-07-05
+6|Michael|Suyama|10264|1996-07-24
+6|Michael|Suyama|10271|1996-08-01
+6|Michael|Suyama|10272|1996-08-02
+6|Michael|Suyama|10274|1996-08-06
+6|Michael|Suyama|10291|1996-08-27
+6|Michael|Suyama|10296|1996-09-03
+6|Michael|Suyama|10298|1996-09-05
+6|Michael|Suyama|10317|1996-09-30
+6|Michael|Suyama|10350|1996-11-11
+6|Michael|Suyama|10355|1996-11-15
+6|Michael|Suyama|10356|1996-11-18
+6|Michael|Suyama|10370|1996-12-03
+6|Michael|Suyama|10390|1996-12-23
+6|Michael|Suyama|10395|1996-12-26
+6|Michael|Suyama|10423|1997-01-23
+6|Michael|Suyama|10425|1997-01-24
+6|Michael|Suyama|10439|1997-02-07
+6|Michael|Suyama|10446|1997-02-14
+6|Michael|Suyama|10480|1997-03-20
+6|Michael|Suyama|10489|1997-03-28
+6|Michael|Suyama|10500|1997-04-09
+6|Michael|Suyama|10503|1997-04-11
+6|Michael|Suyama|10510|1997-04-18
+6|Michael|Suyama|10519|1997-04-28
+6|Michael|Suyama|10528|1997-05-06
+6|Michael|Suyama|10539|1997-05-16
+6|Michael|Suyama|10555|1997-06-02
+6|Michael|Suyama|10559|1997-06-05
+6|Michael|Suyama|10599|1997-07-15
+6|Michael|Suyama|10611|1997-07-25
+6|Michael|Suyama|10637|1997-08-19
+6|Michael|Suyama|10643|1997-08-25
+6|Michael|Suyama|10656|1997-09-04
+6|Michael|Suyama|10701|1997-10-13
+6|Michael|Suyama|10703|1997-10-14
+6|Michael|Suyama|10704|1997-10-14
+6|Michael|Suyama|10708|1997-10-17
+6|Michael|Suyama|10735|1997-11-10
+6|Michael|Suyama|10744|1997-11-17
+6|Michael|Suyama|10747|1997-11-19
+6|Michael|Suyama|10754|1997-11-25
+6|Michael|Suyama|10757|1997-11-27
+6|Michael|Suyama|10764|1997-12-03
+6|Michael|Suyama|10790|1997-12-22
+6|Michael|Suyama|10791|1997-12-23
+6|Michael|Suyama|10794|1997-12-24
+6|Michael|Suyama|10804|1997-12-30
+6|Michael|Suyama|10822|1998-01-08
+6|Michael|Suyama|10826|1998-01-12
+6|Michael|Suyama|10833|1998-01-15
+6|Michael|Suyama|10867|1998-02-03
+6|Michael|Suyama|10885|1998-02-12
+6|Michael|Suyama|10907|1998-02-25
+6|Michael|Suyama|10914|1998-02-27
+6|Michael|Suyama|10929|1998-03-05
+6|Michael|Suyama|10933|1998-03-06
+6|Michael|Suyama|10944|1998-03-12
+6|Michael|Suyama|10956|1998-03-17
+6|Michael|Suyama|10959|1998-03-18
+6|Michael|Suyama|10965|1998-03-20
+6|Michael|Suyama|10973|1998-03-24
+6|Michael|Suyama|10999|1998-04-03
+6|Michael|Suyama|11019|1998-04-13
+6|Michael|Suyama|11025|1998-04-15
+6|Michael|Suyama|11031|1998-04-17
+6|Michael|Suyama|11045|1998-04-23
+
+
+
+-- 2. List each territory by region
+
+select rtrim(r.regiondescription), t.territorydescription, t.regionid, r.regionid from territories t join region r on t.regionid = r.regionid order by r.regiondescription, t.territorydescription;
+rtrim(r.regiondescription)|TerritoryDescription|RegionID|RegionID
+Eastern|Bedford|1|1
+Eastern|Boston|1|1
+Eastern|Braintree|1|1
+Eastern|Cambridge|1|1
+Eastern|Cary|1|1
+Eastern|Edison|1|1
+Eastern|Fairport|1|1
+Eastern|Georgetow|1|1
+Eastern|Greensboro|1|1
+Eastern|Louisville|1|1
+Eastern|Mellvile|1|1
+Eastern|Morristown|1|1
+Eastern|NewYork|1|1
+Eastern|NewYork|1|1
+Eastern|Neward|1|1
+Eastern|Providence|1|1
+Eastern|Rockville|1|1
+Eastern|Westboro|1|1
+Eastern|Wilton|1|1
+Northern|Beachwood|3|3
+Northern|BloomfieldHills|3|3
+Northern|Findlay|3|3
+Northern|Hollis|3|3
+Northern|Minneapolis|3|3
+Northern|Philadelphia|3|3
+Northern|Portsmouth|3|3
+Northern|Racine|3|3
+Northern|Roseville|3|3
+Northern|Southfield|3|3
+Northern|Troy|3|3
+Southern|Atlanta|4|4
+Southern|Austin|4|4
+Southern|Bentonville|4|4
+Southern|Columbia|4|4
+Southern|Dallas|4|4
+Southern|Orlando|4|4
+Southern|Savannah|4|4
+Southern|Tampa|4|4
+Western|Bellevue|2|2
+Western|Campbell|2|2
+Western|Chicago|2|2
+Western|ColoradoSprings|2|2
+Western|Denver|2|2
+Western|HoffmanEstates|2|2
+Western|MenloPark|2|2
+Western|Phoenix|2|2
+Western|Redmond|2|2
+Western|SanFrancisco|2|2
+Western|SantaClara|2|2
+Western|SantaCruz|2|2
+Western|SantaMonica|2|2
+Western|Scottsdale|2|2
+Western|Seattle|2|2
+
+
+
+-- 3. What is the supplier name for each product alphabetically by supplier?
+
+select s.supplierid, s.contactname, s.companyname, p.productname, p.productid from suppliers s join products p on s.supplierid = p.supplierid order by s.companyname, p.productname;
+SupplierID|ContactName|CompanyName|ProductName|ProductID
+18|Guylène Nodier|Aux joyeux ecclésiastiques|Chartreuse verte|39
+18|Guylène Nodier|Aux joyeux ecclésiastiques|Côte de Blaye|38
+16|Cheryl Saylor|Bigfoot Breweries|Laughing Lumberjack Lager|67
+16|Cheryl Saylor|Bigfoot Breweries|Sasquatch Ale|34
+16|Cheryl Saylor|Bigfoot Breweries|Steeleye Stout|35
+5|Antonio del Valle Saavedra|Cooperativa de Quesos 'Las Cabras'|Queso Cabrales|11
+5|Antonio del Valle Saavedra|Cooperativa de Quesos 'Las Cabras'|Queso Manchego La Pastora|12
+27|Marie Delamare|Escargots Nouveaux|Escargots de Bourgogne|58
+1|Charlotte Cooper|Exotic Liquids|Aniseed Syrup|3
+1|Charlotte Cooper|Exotic Liquids|Chai|1
+1|Charlotte Cooper|Exotic Liquids|Chang|2
+14|Elio Rossi|Formaggi Fortini s.r.l.|Gorgonzola Telino|31
+14|Elio Rossi|Formaggi Fortini s.r.l.|Mascarpone Fabioli|32
+14|Elio Rossi|Formaggi Fortini s.r.l.|Mozzarella di Giovanni|72
+29|Chantal Goulet|Forêts d'érables|Sirop d'érable|61
+29|Chantal Goulet|Forêts d'érables|Tarte au sucre|62
+24|Wendy Mackenzie|G'day, Mate|Filo Mix|52
+24|Wendy Mackenzie|G'day, Mate|Manjimup Dried Apples|51
+24|Wendy Mackenzie|G'day, Mate|Perth Pasties|53
+28|Eliane Noz|Gai pâturage|Camembert Pierrot|60
+28|Eliane Noz|Gai pâturage|Raclette Courdavault|59
+3|Regina Murphy|Grandma Kelly's Homestead|Grandma's Boysenberry Spread|6
+3|Regina Murphy|Grandma Kelly's Homestead|Northwoods Cranberry Sauce|8
+3|Regina Murphy|Grandma Kelly's Homestead|Uncle Bob's Organic Dried Pears|7
+11|Petra Winkler|Heli Süßwaren GmbH & Co. KG|Gumbär Gummibärchen|26
+11|Petra Winkler|Heli Süßwaren GmbH & Co. KG|NuNuCa Nuß-Nougat-Creme|25
+11|Petra Winkler|Heli Süßwaren GmbH & Co. KG|Schoggi Schokolade|27
+23|Anne Heikkonen|Karkki Oy|Lakkalikööri|76
+23|Anne Heikkonen|Karkki Oy|Maxilaku|49
+23|Anne Heikkonen|Karkki Oy|Valkoinen suklaa|50
+20|Chandra Leka|Leka Trading|Gula Malacca|44
+20|Chandra Leka|Leka Trading|Ipoh Coffee|43
+20|Chandra Leka|Leka Trading|Singaporean Hokkien Fried Mee|42
+21|Niels Petersen|Lyngbysild|Rogede sild|45
+21|Niels Petersen|Lyngbysild|Spegesild|46
+25|Jean-Guy Lauzon|Ma Maison|Pâté chinois|55
+25|Jean-Guy Lauzon|Ma Maison|Tourtière|54
+6|Mayumi Ohno|Mayumi's|Genen Shouyu|15
+6|Mayumi Ohno|Mayumi's|Konbu|13
+6|Mayumi Ohno|Mayumi's|Tofu|14
+19|Robb Merchant|New England Seafood Cannery|Boston Crab Meat|40
+19|Robb Merchant|New England Seafood Cannery|Jack's New England Clam Chowder|41
+2|Shelley Burke|New Orleans Cajun Delights|Chef Anton's Cajun Seasoning|4
+2|Shelley Burke|New Orleans Cajun Delights|Chef Anton's Gumbo Mix|5
+2|Shelley Burke|New Orleans Cajun Delights|Louisiana Fiery Hot Pepper Sauce|65
+2|Shelley Burke|New Orleans Cajun Delights|Louisiana Hot Spiced Okra|66
+13|Sven Petersen|Nord-Ost-Fisch Handelsgesellschaft mbH|Nord-Ost Matjeshering|30
+15|Beate Vileid|Norske Meierier|Flotemysost|71
+15|Beate Vileid|Norske Meierier|Geitost|33
+15|Beate Vileid|Norske Meierier|Gudbrandsdalsost|69
+9|Lars Peterson|PB Knäckebröd AB|Gustaf's Knäckebröd|22
+9|Lars Peterson|PB Knäckebröd AB|Tunnbröd|23
+26|Giovanni Giudici|Pasta Buttini s.r.l.|Gnocchi di nonna Alice|56
+26|Giovanni Giudici|Pasta Buttini s.r.l.|Ravioli Angelo|57
+7|Ian Devling|Pavlova, Ltd.|Alice Mutton|17
+7|Ian Devling|Pavlova, Ltd.|Carnarvon Tigers|18
+7|Ian Devling|Pavlova, Ltd.|Outback Lager|70
+7|Ian Devling|Pavlova, Ltd.|Pavlova|16
+7|Ian Devling|Pavlova, Ltd.|Vegie-spread|63
+12|Martin Bein|Plutzer Lebensmittelgroßmärkte AG|Original Frankfurter grüne Soße|77
+12|Martin Bein|Plutzer Lebensmittelgroßmärkte AG|Rhönbräu Klosterbier|75
+12|Martin Bein|Plutzer Lebensmittelgroßmärkte AG|Rössle Sauerkraut|28
+12|Martin Bein|Plutzer Lebensmittelgroßmärkte AG|Thüringer Rostbratwurst|29
+12|Martin Bein|Plutzer Lebensmittelgroßmärkte AG|Wimmers gute Semmelknödel|64
+10|Carlos Diaz|Refrescos Americanas LTDA|Guaraná Fantástica|24
+8|Peter Wilson|Specialty Biscuits, Ltd.|Scottish Longbreads|68
+8|Peter Wilson|Specialty Biscuits, Ltd.|Sir Rodney's Marmalade|20
+8|Peter Wilson|Specialty Biscuits, Ltd.|Sir Rodney's Scones|21
+8|Peter Wilson|Specialty Biscuits, Ltd.|Teatime Chocolate Biscuits|19
+17|Michael Björn|Svensk Sjöföda AB|Gravad lax|37
+17|Michael Björn|Svensk Sjöföda AB|Inlagd Sill|36
+17|Michael Björn|Svensk Sjöföda AB|Röd Kaviar|73
+4|Yoshi Nagase|Tokyo Traders|Ikura|10
+4|Yoshi Nagase|Tokyo Traders|Longlife Tofu|74
+4|Yoshi Nagase|Tokyo Traders|Mishi Kobe Niku|9
+22|Dirk Luchte|Zaanse Snoepfabriek|Chocolade|48
+22|Dirk Luchte|Zaanse Snoepfabriek|Zaanse koeken|47
+
+
+
+-- 4. For every order on May 5, 1998, how many of each item was ordered, and what was the price of the item?
+
+select od.orderid, o.orderid, o.customerid, o.orderdate, od.quantity, od.unitprice from orders o join order_details od on o.orderid = od.orderid where o.orderdate like "1998-05-05";
+OrderID|OrderID|CustomerID|OrderDate|Quantity|UnitPrice
+11070|11070|LEHMS|1998-05-05|40|18.0
+11070|11070|LEHMS|1998-05-05|20|19.0
+11070|11070|LEHMS|1998-05-05|30|17.45
+11070|11070|LEHMS|1998-05-05|20|12.5
+11071|11071|LILAS|1998-05-05|15|30.0
+11071|11071|LILAS|1998-05-05|10|6.0
+11072|11072|ERNSH|1998-05-05|8|19.0
+11072|11072|ERNSH|1998-05-05|40|9.65
+11072|11072|ERNSH|1998-05-05|22|16.25
+11072|11072|ERNSH|1998-05-05|130|33.25
+11073|11073|PERIC|1998-05-05|10|21.0
+11073|11073|PERIC|1998-05-05|20|4.5
+
+
+
+-- Shows they are all matching w/ country
+select od.orderid, o.orderid, o.customerid, c.customerid, c.country, o.orderdate, od.quantity, od.unitprice from (orders o join order_details od on o.orderid = od.orderid) join customers c on c.customerid = o.customerid where o.orderdate like "1998-05-05";
+OrderID|OrderID|CustomerID|CustomerID|Country|OrderDate|Quantity|UnitPrice
+11070|11070|LEHMS|LEHMS|Germany|1998-05-05|40|18.0
+11070|11070|LEHMS|LEHMS|Germany|1998-05-05|20|19.0
+11070|11070|LEHMS|LEHMS|Germany|1998-05-05|30|17.45
+11070|11070|LEHMS|LEHMS|Germany|1998-05-05|20|12.5
+11071|11071|LILAS|LILAS|Venezuela|1998-05-05|15|30.0
+11071|11071|LILAS|LILAS|Venezuela|1998-05-05|10|6.0
+11072|11072|ERNSH|ERNSH|Austria|1998-05-05|8|19.0
+11072|11072|ERNSH|ERNSH|Austria|1998-05-05|40|9.65
+11072|11072|ERNSH|ERNSH|Austria|1998-05-05|22|16.25
+11072|11072|ERNSH|ERNSH|Austria|1998-05-05|130|33.25
+11073|11073|PERIC|PERIC|Mexico|1998-05-05|10|21.0
+11073|11073|PERIC|PERIC|Mexico|1998-05-05|20|4.5
+
+
+
+-- shows the country w/o extra id's
+select o.orderid, o.customerid, c.country, o.orderdate, od.quantity, od.unitprice from (orders o join order_details od on o.orderid = od.orderid) join customers c on c.customerid = o.customerid where o.orderdate like "1998-05-05";
+OrderID|CustomerID|Country|OrderDate|Quantity|UnitPrice
+11070|LEHMS|Germany|1998-05-05|40|18.0
+11070|LEHMS|Germany|1998-05-05|20|19.0
+11070|LEHMS|Germany|1998-05-05|30|17.45
+11070|LEHMS|Germany|1998-05-05|20|12.5
+11071|LILAS|Venezuela|1998-05-05|15|30.0
+11071|LILAS|Venezuela|1998-05-05|10|6.0
+11072|ERNSH|Austria|1998-05-05|8|19.0
+11072|ERNSH|Austria|1998-05-05|40|9.65
+11072|ERNSH|Austria|1998-05-05|22|16.25
+11072|ERNSH|Austria|1998-05-05|130|33.25
+11073|PERIC|Mexico|1998-05-05|10|21.0
+11073|PERIC|Mexico|1998-05-05|20|4.5
+
+
+
+-- 5. For every order on May 5, 1998, how many of each item was ordered giving the name of the item, and what was the price of the item?
+
+-- 6. For every order in May, 1998, what was the customer's name and the shipper's name?
+
+-- 7. What is the customer's name and the employeee's name for every order shipped to France?
+
+-- 8. List the products by name that were shipped to Germany.
+
+select p.productid, p.productname, o.orderid, o.shipcountry from (products p join order_details od on p.productid = od.productid) join orders o on od.orderid = o.orderid where o.shipcountry like 'Germany';
+ProductID|ProductName|OrderID|ShipCountry
+14|Tofu|10249|Germany
+51|Manjimup Dried Apples|10249|Germany
+41|Jack's New England Clam Chowder|10260|Germany
+57|Ravioli Angelo|10260|Germany
+62|Tarte au sucre|10260|Germany
+70|Outback Lager|10260|Germany
+40|Boston Crab Meat|10267|Germany
+59|Raclette Courdavault|10267|Germany
+76|Lakkalikööri|10267|Germany
+10|Ikura|10273|Germany
+31|Gorgonzola Telino|10273|Germany
+33|Geitost|10273|Germany
+40|Boston Crab Meat|10273|Germany
+76|Lakkalikööri|10273|Germany
+28|Rössle Sauerkraut|10277|Germany
+62|Tarte au sucre|10277|Germany
+17|Alice Mutton|10279|Germany
+27|Schoggi Schokolade|10284|Germany
+44|Gula Malacca|10284|Germany
+60|Camembert Pierrot|10284|Germany
+67|Laughing Lumberjack Lager|10284|Germany
+1|Chai|10285|Germany
+40|Boston Crab Meat|10285|Germany
+53|Perth Pasties|10285|Germany
+35|Steeleye Stout|10286|Germany
+62|Tarte au sucre|10286|Germany
+40|Boston Crab Meat|10301|Germany
+56|Gnocchi di nonna Alice|10301|Germany
+28|Rössle Sauerkraut|10312|Germany
+43|Ipoh Coffee|10312|Germany
+53|Perth Pasties|10312|Germany
+75|Rhönbräu Klosterbier|10312|Germany
+36|Inlagd Sill|10313|Germany
+15|Genen Shouyu|10323|Germany
+25|NuNuCa Nuß-Nougat-Creme|10323|Germany
+39|Chartreuse verte|10323|Germany
+6|Grandma's Boysenberry Spread|10325|Germany
+13|Konbu|10325|Germany
+14|Tofu|10325|Germany
+31|Gorgonzola Telino|10325|Germany
+72|Mozzarella di Giovanni|10325|Germany
+23|Tunnbröd|10337|Germany
+26|Gumbär Gummibärchen|10337|Germany
+36|Inlagd Sill|10337|Germany
+37|Gravad lax|10337|Germany
+72|Mozzarella di Giovanni|10337|Germany
+2|Chang|10342|Germany
+31|Gorgonzola Telino|10342|Germany
+36|Inlagd Sill|10342|Germany
+55|Pâté chinois|10342|Germany
+64|Wimmers gute Semmelknödel|10343|Germany
+68|Scottish Longbreads|10343|Germany
+76|Lakkalikööri|10343|Germany
+8|Northwoods Cranberry Sauce|10345|Germany
+19|Teatime Chocolate Biscuits|10345|Germany
+42|Singaporean Hokkien Fried Mee|10345|Germany
+1|Chai|10348|Germany
+23|Tunnbröd|10348|Germany
+31|Gorgonzola Telino|10356|Germany
+55|Pâté chinois|10356|Germany
+69|Gudbrandsdalsost|10356|Germany
+39|Chartreuse verte|10361|Germany
+60|Camembert Pierrot|10361|Germany
+31|Gorgonzola Telino|10363|Germany
+75|Rhönbräu Klosterbier|10363|Germany
+76|Lakkalikööri|10363|Germany
+13|Konbu|10391|Germany
+23|Tunnbröd|10396|Germany
+71|Flotemysost|10396|Germany
+72|Mozzarella di Giovanni|10396|Germany
+11|Queso Cabrales|10407|Germany
+69|Gudbrandsdalsost|10407|Germany
+71|Flotemysost|10407|Germany
+2|Chang|10418|Germany
+47|Zaanse koeken|10418|Germany
+61|Sirop d'érable|10418|Germany
+74|Longlife Tofu|10418|Germany
+19|Teatime Chocolate Biscuits|10438|Germany
+34|Sasquatch Ale|10438|Germany
+57|Ravioli Angelo|10438|Germany
+19|Teatime Chocolate Biscuits|10446|Germany
+24|Guaraná Fantástica|10446|Germany
+31|Gorgonzola Telino|10446|Germany
+52|Filo Mix|10446|Germany
+55|Pâté chinois|10451|Germany
+64|Wimmers gute Semmelknödel|10451|Germany
+65|Louisiana Fiery Hot Pepper Sauce|10451|Germany
+77|Original Frankfurter grüne Soße|10451|Germany
+21|Sir Rodney's Scones|10456|Germany
+49|Maxilaku|10456|Germany
+59|Raclette Courdavault|10457|Germany
+30|Nord-Ost Matjeshering|10468|Germany
+43|Ipoh Coffee|10468|Germany
+59|Raclette Courdavault|10488|Germany
+73|Röd Kaviar|10488|Germany
+56|Gnocchi di nonna Alice|10497|Germany
+72|Mozzarella di Giovanni|10497|Germany
+77|Original Frankfurter grüne Soße|10497|Germany
+54|Tourtière|10501|Germany
+25|NuNuCa Nuß-Nougat-Creme|10506|Germany
+70|Outback Lager|10506|Germany
+13|Konbu|10508|Germany
+39|Chartreuse verte|10508|Germany
+28|Rössle Sauerkraut|10509|Germany
+21|Sir Rodney's Scones|10513|Germany
+32|Mascarpone Fabioli|10513|Germany
+61|Sirop d'érable|10513|Germany
+9|Mishi Kobe Niku|10515|Germany
+16|Pavlova|10515|Germany
+27|Schoggi Schokolade|10515|Germany
+33|Geitost|10515|Germany
+60|Camembert Pierrot|10515|Germany
+1|Chai|10522|Germany
+8|Northwoods Cranberry Sauce|10522|Germany
+30|Nord-Ost Matjeshering|10522|Germany
+40|Boston Crab Meat|10522|Germany
+4|Chef Anton's Cajun Seasoning|10527|Germany
+36|Inlagd Sill|10527|Germany
+30|Nord-Ost Matjeshering|10534|Germany
+40|Boston Crab Meat|10534|Germany
+54|Tourtière|10534|Germany
+12|Queso Manchego La Pastora|10536|Germany
+31|Gorgonzola Telino|10536|Germany
+33|Geitost|10536|Germany
+60|Camembert Pierrot|10536|Germany
+3|Aniseed Syrup|10540|Germany
+26|Gumbär Gummibärchen|10540|Germany
+38|Côte de Blaye|10540|Germany
+68|Scottish Longbreads|10540|Germany
+11|Queso Cabrales|10542|Germany
+54|Tourtière|10542|Germany
+34|Sasquatch Ale|10548|Germany
+41|Jack's New England Clam Chowder|10548|Germany
+31|Gorgonzola Telino|10549|Germany
+45|Rogede sild|10549|Germany
+51|Manjimup Dried Apples|10549|Germany
+16|Pavlova|10554|Germany
+23|Tunnbröd|10554|Germany
+62|Tarte au sucre|10554|Germany
+77|Original Frankfurter grüne Soße|10554|Germany
+64|Wimmers gute Semmelknödel|10557|Germany
+75|Rhönbräu Klosterbier|10557|Germany
+30|Nord-Ost Matjeshering|10560|Germany
+62|Tarte au sucre|10560|Germany
+59|Raclette Courdavault|10575|Germany
+63|Vegie-spread|10575|Germany
+72|Mozzarella di Giovanni|10575|Germany
+76|Lakkalikööri|10575|Germany
+14|Tofu|10580|Germany
+41|Jack's New England Clam Chowder|10580|Germany
+65|Louisiana Fiery Hot Pepper Sauce|10580|Germany
+57|Ravioli Angelo|10582|Germany
+76|Lakkalikööri|10582|Germany
+18|Carnarvon Tigers|10588|Germany
+42|Singaporean Hokkien Fried Mee|10588|Germany
+15|Genen Shouyu|10592|Germany
+26|Gumbär Gummibärchen|10592|Germany
+20|Sir Rodney's Marmalade|10593|Germany
+69|Gudbrandsdalsost|10593|Germany
+76|Lakkalikööri|10593|Germany
+56|Gnocchi di nonna Alice|10608|Germany
+11|Queso Cabrales|10614|Germany
+21|Sir Rodney's Scones|10614|Germany
+39|Chartreuse verte|10614|Germany
+14|Tofu|10623|Germany
+19|Teatime Chocolate Biscuits|10623|Germany
+21|Sir Rodney's Scones|10623|Germany
+24|Guaraná Fantástica|10623|Germany
+35|Steeleye Stout|10623|Germany
+55|Pâté chinois|10630|Germany
+76|Lakkalikööri|10630|Germany
+2|Chang|10632|Germany
+33|Geitost|10632|Germany
+69|Gudbrandsdalsost|10640|Germany
+70|Outback Lager|10640|Germany
+28|Rössle Sauerkraut|10643|Germany
+39|Chartreuse verte|10643|Germany
+46|Spegesild|10643|Germany
+19|Teatime Chocolate Biscuits|10651|Germany
+22|Gustaf's Knäckebröd|10651|Germany
+16|Pavlova|10653|Germany
+60|Camembert Pierrot|10653|Germany
+21|Sir Rodney's Scones|10658|Germany
+40|Boston Crab Meat|10658|Germany
+60|Camembert Pierrot|10658|Germany
+77|Original Frankfurter grüne Soße|10658|Germany
+31|Gorgonzola Telino|10668|Germany
+55|Pâté chinois|10668|Germany
+64|Wimmers gute Semmelknödel|10668|Germany
+23|Tunnbröd|10670|Germany
+46|Spegesild|10670|Germany
+67|Laughing Lumberjack Lager|10670|Germany
+73|Röd Kaviar|10670|Germany
+75|Rhönbräu Klosterbier|10670|Germany
+14|Tofu|10675|Germany
+53|Perth Pasties|10675|Germany
+58|Escargots de Bourgogne|10675|Germany
+40|Boston Crab Meat|10684|Germany
+47|Zaanse koeken|10684|Germany
+60|Camembert Pierrot|10684|Germany
+1|Chai|10691|Germany
+29|Thüringer Rostbratwurst|10691|Germany
+43|Ipoh Coffee|10691|Germany
+44|Gula Malacca|10691|Germany
+62|Tarte au sucre|10691|Germany
+63|Vegie-spread|10692|Germany
+7|Uncle Bob's Organic Dried Pears|10694|Germany
+59|Raclette Courdavault|10694|Germany
+70|Outback Lager|10694|Germany
+47|Zaanse koeken|10699|Germany
+3|Aniseed Syrup|10702|Germany
+76|Lakkalikööri|10702|Germany
+21|Sir Rodney's Scones|10717|Germany
+54|Tourtière|10717|Germany
+69|Gudbrandsdalsost|10717|Germany
+12|Queso Manchego La Pastora|10718|Germany
+16|Pavlova|10718|Germany
+36|Inlagd Sill|10718|Germany
+62|Tarte au sucre|10718|Germany
+44|Gula Malacca|10721|Germany
+18|Carnarvon Tigers|10745|Germany
+44|Gula Malacca|10745|Germany
+59|Raclette Courdavault|10745|Germany
+72|Mozzarella di Giovanni|10745|Germany
+65|Louisiana Fiery Hot Pepper Sauce|10765|Germany
+2|Chang|10766|Germany
+7|Uncle Bob's Organic Dried Pears|10766|Germany
+68|Scottish Longbreads|10766|Germany
+29|Thüringer Rostbratwurst|10772|Germany
+59|Raclette Courdavault|10772|Germany
+16|Pavlova|10779|Germany
+62|Tarte au sucre|10779|Germany
+19|Teatime Chocolate Biscuits|10788|Germany
+75|Rhönbräu Klosterbier|10788|Germany
+29|Thüringer Rostbratwurst|10791|Germany
+41|Jack's New England Clam Chowder|10791|Germany
+11|Queso Cabrales|10797|Germany
+13|Konbu|10799|Germany
+24|Guaraná Fantástica|10799|Germany
+59|Raclette Courdavault|10799|Germany
+26|Gumbär Gummibärchen|10817|Germany
+38|Côte de Blaye|10817|Germany
+40|Boston Crab Meat|10817|Germany
+62|Tarte au sucre|10817|Germany
+26|Gumbär Gummibärchen|10825|Germany
+53|Perth Pasties|10825|Germany
+7|Uncle Bob's Organic Dried Pears|10833|Germany
+31|Gorgonzola Telino|10833|Germany
+53|Perth Pasties|10833|Germany
+59|Raclette Courdavault|10835|Germany
+77|Original Frankfurter grüne Soße|10835|Germany
+23|Tunnbröd|10845|Germany
+35|Steeleye Stout|10845|Germany
+42|Singaporean Hokkien Fried Mee|10845|Germany
+58|Escargots de Bourgogne|10845|Germany
+64|Wimmers gute Semmelknödel|10845|Germany
+3|Aniseed Syrup|10849|Germany
+26|Gumbär Gummibärchen|10849|Germany
+18|Carnarvon Tigers|10853|Germany
+24|Guaraná Fantástica|10859|Germany
+54|Tourtière|10859|Germany
+64|Wimmers gute Semmelknödel|10859|Germany
+11|Queso Cabrales|10862|Germany
+52|Filo Mix|10862|Germany
+38|Côte de Blaye|10865|Germany
+39|Chartreuse verte|10865|Germany
+20|Sir Rodney's Marmalade|10878|Germany
+30|Nord-Ost Matjeshering|10891|Germany
+8|Northwoods Cranberry Sauce|10893|Germany
+24|Guaraná Fantástica|10893|Germany
+29|Thüringer Rostbratwurst|10893|Germany
+30|Nord-Ost Matjeshering|10893|Germany
+36|Inlagd Sill|10893|Germany
+21|Sir Rodney's Scones|10929|Germany
+75|Rhönbräu Klosterbier|10929|Germany
+77|Original Frankfurter grüne Soße|10929|Germany
+6|Grandma's Boysenberry Spread|10934|Germany
+13|Konbu|10938|Germany
+43|Ipoh Coffee|10938|Germany
+60|Camembert Pierrot|10938|Germany
+71|Flotemysost|10938|Germany
+13|Konbu|10945|Germany
+31|Gorgonzola Telino|10945|Germany
+6|Grandma's Boysenberry Spread|10952|Germany
+28|Rössle Sauerkraut|10952|Germany
+21|Sir Rodney's Scones|10956|Germany
+47|Zaanse koeken|10956|Germany
+51|Manjimup Dried Apples|10956|Germany
+7|Uncle Bob's Organic Dried Pears|10962|Germany
+13|Konbu|10962|Germany
+53|Perth Pasties|10962|Germany
+69|Gudbrandsdalsost|10962|Germany
+76|Lakkalikööri|10962|Germany
+19|Teatime Chocolate Biscuits|10967|Germany
+49|Maxilaku|10967|Germany
+2|Chang|10991|Germany
+70|Outback Lager|10991|Germany
+76|Lakkalikööri|10991|Germany
+42|Singaporean Hokkien Fried Mee|10996|Germany
+41|Jack's New England Clam Chowder|10999|Germany
+51|Manjimup Dried Apples|10999|Germany
+77|Original Frankfurter grüne Soße|10999|Germany
+58|Escargots de Bourgogne|11011|Germany
+71|Flotemysost|11011|Germany
+19|Teatime Chocolate Biscuits|11012|Germany
+60|Camembert Pierrot|11012|Germany
+71|Flotemysost|11012|Germany
+10|Ikura|11020|Germany
+2|Chang|11021|Germany
+20|Sir Rodney's Marmalade|11021|Germany
+26|Gumbär Gummibärchen|11021|Germany
+51|Manjimup Dried Apples|11021|Germany
+72|Mozzarella di Giovanni|11021|Germany
+55|Pâté chinois|11028|Germany
+59|Raclette Courdavault|11028|Germany
+13|Konbu|11036|Germany
+59|Raclette Courdavault|11036|Germany
+12|Queso Manchego La Pastora|11046|Germany
+32|Mascarpone Fabioli|11046|Germany
+35|Steeleye Stout|11046|Germany
+21|Sir Rodney's Scones|11058|Germany
+60|Camembert Pierrot|11058|Germany
+61|Sirop d'érable|11058|Germany
+41|Jack's New England Clam Chowder|11067|Germany
+1|Chai|11070|Germany
+2|Chang|11070|Germany
+16|Pavlova|11070|Germany
+31|Gorgonzola Telino|11070|Germany

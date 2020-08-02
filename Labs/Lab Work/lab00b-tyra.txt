@@ -1,0 +1,453 @@
+Name: Tyra Oberholzer
+File: lab00b-tyra.txt (Cmd Prompt Lab)
+Date: July 1, 2020
+
+Microsoft Windows [Version 10.0.18363.900]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\Tyra>dir
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra
+
+2020-07-01  09:38 AM    <DIR>          .
+2020-07-01  09:38 AM    <DIR>          ..
+2020-06-30  10:03 PM    <DIR>          .atom
+2020-06-30  09:58 PM    <DIR>          .dia
+2020-05-01  10:59 PM    <DIR>          .Origin
+2020-05-01  10:59 PM    <DIR>          .QtWebEngineProcess
+2020-06-10  12:35 AM    <DIR>          3D Objects
+2020-01-01  11:00 AM    <DIR>          ansel
+2020-06-10  12:35 AM    <DIR>          Contacts
+2020-07-01  09:14 AM    <DIR>          Desktop
+2020-07-01  07:46 AM    <DIR>          Documents
+2020-07-01  08:19 AM    <DIR>          Downloads
+2020-06-10  12:35 AM    <DIR>          Favorites
+2020-07-01  09:26 AM             7,140 helpfile1.txt
+2020-07-01  09:30 AM            11,482 helpfile3.txt
+2020-07-01  09:32 AM             1,920 helpfile4.txt
+2020-06-10  12:35 AM    <DIR>          Links
+2020-06-10  12:35 AM    <DIR>          Music
+2020-06-30  09:12 AM    <DIR>          OneDrive
+2020-06-10  12:35 AM    <DIR>          Pictures
+2020-07-01  09:49 AM           152,529 PowerShell_transcript.LAPTOP-76PIPE8R.PM7mlD41.20200701093848.txt
+2020-06-10  12:35 AM    <DIR>          Saved Games
+2020-06-10  12:35 AM    <DIR>          Searches
+2020-06-30  10:11 PM    <DIR>          source
+2020-06-30  10:41 PM    <DIR>          Videos
+               4 File(s)        173,071 bytes
+              21 Dir(s)  92,348,874,752 bytes free
+
+C:\Users\Tyra>help
+For more information on a specific command, type HELP command-name
+ASSOC          Displays or modifies file extension associations.
+ATTRIB         Displays or changes file attributes.
+BREAK          Sets or clears extended CTRL+C checking.
+BCDEDIT        Sets properties in boot database to control boot loading.
+CACLS          Displays or modifies access control lists (ACLs) of files.
+CALL           Calls one batch program from another.
+CD             Displays the name of or changes the current directory.
+CHCP           Displays or sets the active code page number.
+CHDIR          Displays the name of or changes the current directory.
+CHKDSK         Checks a disk and displays a status report.
+CHKNTFS        Displays or modifies the checking of disk at boot time.
+CLS            Clears the screen.
+CMD            Starts a new instance of the Windows command interpreter.
+COLOR          Sets the default console foreground and background colors.
+COMP           Compares the contents of two files or sets of files.
+COMPACT        Displays or alters the compression of files on NTFS partitions.
+CONVERT        Converts FAT volumes to NTFS.  You cannot convert the
+               current drive.
+COPY           Copies one or more files to another location.
+DATE           Displays or sets the date.
+DEL            Deletes one or more files.
+DIR            Displays a list of files and subdirectories in a directory.
+DISKPART       Displays or configures Disk Partition properties.
+DOSKEY         Edits command lines, recalls Windows commands, and
+               creates macros.
+DRIVERQUERY    Displays current device driver status and properties.
+ECHO           Displays messages, or turns command echoing on or off.
+ENDLOCAL       Ends localization of environment changes in a batch file.
+ERASE          Deletes one or more files.
+EXIT           Quits the CMD.EXE program (command interpreter).
+FC             Compares two files or sets of files, and displays the
+               differences between them.
+FIND           Searches for a text string in a file or files.
+FINDSTR        Searches for strings in files.
+FOR            Runs a specified command for each file in a set of files.
+FORMAT         Formats a disk for use with Windows.
+FSUTIL         Displays or configures the file system properties.
+FTYPE          Displays or modifies file types used in file extension
+               associations.
+GOTO           Directs the Windows command interpreter to a labeled line in
+               a batch program.
+GPRESULT       Displays Group Policy information for machine or user.
+GRAFTABL       Enables Windows to display an extended character set in
+               graphics mode.
+HELP           Provides Help information for Windows commands.
+ICACLS         Display, modify, backup, or restore ACLs for files and
+               directories.
+IF             Performs conditional processing in batch programs.
+LABEL          Creates, changes, or deletes the volume label of a disk.
+MD             Creates a directory.
+MKDIR          Creates a directory.
+MKLINK         Creates Symbolic Links and Hard Links
+MODE           Configures a system device.
+MORE           Displays output one screen at a time.
+MOVE           Moves one or more files from one directory to another
+               directory.
+OPENFILES      Displays files opened by remote users for a file share.
+PATH           Displays or sets a search path for executable files.
+PAUSE          Suspends processing of a batch file and displays a message.
+POPD           Restores the previous value of the current directory saved by
+               PUSHD.
+PRINT          Prints a text file.
+PROMPT         Changes the Windows command prompt.
+PUSHD          Saves the current directory then changes it.
+RD             Removes a directory.
+RECOVER        Recovers readable information from a bad or defective disk.
+REM            Records comments (remarks) in batch files or CONFIG.SYS.
+REN            Renames a file or files.
+RENAME         Renames a file or files.
+REPLACE        Replaces files.
+RMDIR          Removes a directory.
+ROBOCOPY       Advanced utility to copy files and directory trees
+SET            Displays, sets, or removes Windows environment variables.
+SETLOCAL       Begins localization of environment changes in a batch file.
+SC             Displays or configures services (background processes).
+SCHTASKS       Schedules commands and programs to run on a computer.
+SHIFT          Shifts the position of replaceable parameters in batch files.
+SHUTDOWN       Allows proper local or remote shutdown of machine.
+SORT           Sorts input.
+START          Starts a separate window to run a specified program or command.
+SUBST          Associates a path with a drive letter.
+SYSTEMINFO     Displays machine specific properties and configuration.
+TASKLIST       Displays all currently running tasks including services.
+TASKKILL       Kill or stop a running process or application.
+TIME           Displays or sets the system time.
+TITLE          Sets the window title for a CMD.EXE session.
+TREE           Graphically displays the directory structure of a drive or 
+               path.
+TYPE           Displays the contents of a text file.
+VER            Displays the Windows version.
+VERIFY         Tells Windows whether to verify that your files are written
+               correctly to a disk.
+VOL            Displays a disk volume label and serial number.
+XCOPY          Copies files and directory trees.
+WMIC           Displays WMI information inside interactive command shell.
+
+For more information on tools see the command-line reference in the online help.
+
+C:\Users\Tyra>help mkdir
+Creates a directory.
+
+MKDIR [drive:]path
+MD [drive:]path
+
+If Command Extensions are enabled MKDIR changes as follows:
+
+MKDIR creates any intermediate directories in the path, if needed.
+For example, assume \a does not exist then:
+
+    mkdir \a\b\c\d
+
+is the same as:
+
+    mkdir \a
+    chdir \a
+    mkdir b
+    chdir b
+    mkdir c
+    chdir c
+    mkdir d
+
+which is what you would have to type if extensions were disabled.
+
+C:\Users\Tyra>mkdir quantico06
+
+C:\Users\Tyra>dir
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra
+
+2020-07-01  10:24 AM    <DIR>          .
+2020-07-01  10:24 AM    <DIR>          ..
+2020-06-30  10:03 PM    <DIR>          .atom
+2020-06-30  09:58 PM    <DIR>          .dia
+2020-05-01  10:59 PM    <DIR>          .Origin
+2020-05-01  10:59 PM    <DIR>          .QtWebEngineProcess
+2020-06-10  12:35 AM    <DIR>          3D Objects
+2020-01-01  11:00 AM    <DIR>          ansel
+2020-06-10  12:35 AM    <DIR>          Contacts
+2020-07-01  09:14 AM    <DIR>          Desktop
+2020-07-01  07:46 AM    <DIR>          Documents
+2020-07-01  08:19 AM    <DIR>          Downloads
+2020-06-10  12:35 AM    <DIR>          Favorites
+2020-07-01  09:26 AM             7,140 helpfile1.txt
+2020-07-01  09:30 AM            11,482 helpfile3.txt
+2020-07-01  09:32 AM             1,920 helpfile4.txt
+2020-06-10  12:35 AM    <DIR>          Links
+2020-06-10  12:35 AM    <DIR>          Music
+2020-06-30  09:12 AM    <DIR>          OneDrive
+2020-06-10  12:35 AM    <DIR>          Pictures
+2020-07-01  09:49 AM           152,529 PowerShell_transcript.LAPTOP-76PIPE8R.PM7mlD41.20200701093848.txt
+2020-07-01  10:24 AM    <DIR>          quantico06
+2020-06-10  12:35 AM    <DIR>          Saved Games
+2020-06-10  12:35 AM    <DIR>          Searches
+2020-06-30  10:11 PM    <DIR>          source
+2020-06-30  10:41 PM    <DIR>          Videos
+               4 File(s)        173,071 bytes
+              22 Dir(s)  92,349,968,384 bytes free
+
+C:\Users\Tyra>cd quantico06
+
+C:\Users\Tyra\quantico06>dir
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra\quantico06
+
+2020-07-01  10:24 AM    <DIR>          .
+2020-07-01  10:24 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  92,361,535,488 bytes free
+
+C:\Users\Tyra\quantico06>dir .
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra\quantico06
+
+2020-07-01  10:24 AM    <DIR>          .
+2020-07-01  10:24 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  92,359,426,048 bytes free
+
+C:\Users\Tyra\quantico06>dir ..
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra
+
+2020-07-01  10:24 AM    <DIR>          .
+2020-07-01  10:24 AM    <DIR>          ..
+2020-06-30  10:03 PM    <DIR>          .atom
+2020-06-30  09:58 PM    <DIR>          .dia
+2020-05-01  10:59 PM    <DIR>          .Origin
+2020-05-01  10:59 PM    <DIR>          .QtWebEngineProcess
+2020-06-10  12:35 AM    <DIR>          3D Objects
+2020-01-01  11:00 AM    <DIR>          ansel
+2020-06-10  12:35 AM    <DIR>          Contacts
+2020-07-01  09:14 AM    <DIR>          Desktop
+2020-07-01  07:46 AM    <DIR>          Documents
+2020-07-01  08:19 AM    <DIR>          Downloads
+2020-06-10  12:35 AM    <DIR>          Favorites
+2020-07-01  09:26 AM             7,140 helpfile1.txt
+2020-07-01  09:30 AM            11,482 helpfile3.txt
+2020-07-01  09:32 AM             1,920 helpfile4.txt
+2020-06-10  12:35 AM    <DIR>          Links
+2020-06-10  12:35 AM    <DIR>          Music
+2020-06-30  09:12 AM    <DIR>          OneDrive
+2020-06-10  12:35 AM    <DIR>          Pictures
+2020-07-01  09:49 AM           152,529 PowerShell_transcript.LAPTOP-76PIPE8R.PM7mlD41.20200701093848.txt
+2020-07-01  10:24 AM    <DIR>          quantico06
+2020-06-10  12:35 AM    <DIR>          Saved Games
+2020-06-10  12:35 AM    <DIR>          Searches
+2020-06-30  10:11 PM    <DIR>          source
+2020-06-30  10:41 PM    <DIR>          Videos
+               4 File(s)        173,071 bytes
+              22 Dir(s)  92,359,426,048 bytes free
+
+C:\Users\Tyra\quantico06>mkdir ISTA420
+
+C:\Users\Tyra\quantico06>cd ISTA420
+
+C:\Users\Tyra\quantico06\ISTA420>dir
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra\quantico06\ISTA420
+
+2020-07-01  10:30 AM    <DIR>          .
+2020-07-01  10:30 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  92,358,217,728 bytes free
+
+C:\Users\Tyra\quantico06\ISTA420>dir .
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra\quantico06\ISTA420
+
+2020-07-01  10:30 AM    <DIR>          .
+2020-07-01  10:30 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  92,357,955,584 bytes free
+
+C:\Users\Tyra\quantico06\ISTA420>dir ..
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra\quantico06
+
+2020-07-01  10:30 AM    <DIR>          .
+2020-07-01  10:30 AM    <DIR>          ..
+2020-07-01  10:30 AM    <DIR>          ISTA420
+               0 File(s)              0 bytes
+               3 Dir(s)  92,357,955,584 bytes free
+
+C:\Users\Tyra\quantico06\ISTA420>mkdir labs
+
+C:\Users\Tyra\quantico06\ISTA420>mkdir homework
+
+C:\Users\Tyra\quantico06\ISTA420>mkdir exercises
+
+C:\Users\Tyra\quantico06\ISTA420>dir
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra\quantico06\ISTA420
+
+2020-07-01  10:32 AM    <DIR>          .
+2020-07-01  10:32 AM    <DIR>          ..
+2020-07-01  10:32 AM    <DIR>          exercises
+2020-07-01  10:32 AM    <DIR>          homework
+2020-07-01  10:32 AM    <DIR>          labs
+               0 File(s)              0 bytes
+               5 Dir(s)  92,357,595,136 bytes free
+
+C:\Users\Tyra\quantico06\ISTA420>move "C:\Users\Tyra\PowerShell_transcript.LAPTOP-76PIPE8R.PM7mlD41.20200701093848.txt" .\labs
+        1 file(s) moved.
+
+C:\Users\Tyra\quantico06\ISTA420>cd ..
+
+C:\Users\Tyra\quantico06>help
+For more information on a specific command, type HELP command-name
+ASSOC          Displays or modifies file extension associations.
+ATTRIB         Displays or changes file attributes.
+BREAK          Sets or clears extended CTRL+C checking.
+BCDEDIT        Sets properties in boot database to control boot loading.
+CACLS          Displays or modifies access control lists (ACLs) of files.
+CALL           Calls one batch program from another.
+CD             Displays the name of or changes the current directory.
+CHCP           Displays or sets the active code page number.
+CHDIR          Displays the name of or changes the current directory.
+CHKDSK         Checks a disk and displays a status report.
+CHKNTFS        Displays or modifies the checking of disk at boot time.
+CLS            Clears the screen.
+CMD            Starts a new instance of the Windows command interpreter.
+COLOR          Sets the default console foreground and background colors.
+COMP           Compares the contents of two files or sets of files.
+COMPACT        Displays or alters the compression of files on NTFS partitions.
+CONVERT        Converts FAT volumes to NTFS.  You cannot convert the
+               current drive.
+COPY           Copies one or more files to another location.
+DATE           Displays or sets the date.
+DEL            Deletes one or more files.
+DIR            Displays a list of files and subdirectories in a directory.
+DISKPART       Displays or configures Disk Partition properties.
+DOSKEY         Edits command lines, recalls Windows commands, and
+               creates macros.
+DRIVERQUERY    Displays current device driver status and properties.
+ECHO           Displays messages, or turns command echoing on or off.
+ENDLOCAL       Ends localization of environment changes in a batch file.
+ERASE          Deletes one or more files.
+EXIT           Quits the CMD.EXE program (command interpreter).
+FC             Compares two files or sets of files, and displays the
+               differences between them.
+FIND           Searches for a text string in a file or files.
+FINDSTR        Searches for strings in files.
+FOR            Runs a specified command for each file in a set of files.
+FORMAT         Formats a disk for use with Windows.
+FSUTIL         Displays or configures the file system properties.
+FTYPE          Displays or modifies file types used in file extension
+               associations.
+GOTO           Directs the Windows command interpreter to a labeled line in
+               a batch program.
+GPRESULT       Displays Group Policy information for machine or user.
+GRAFTABL       Enables Windows to display an extended character set in
+               graphics mode.
+HELP           Provides Help information for Windows commands.
+ICACLS         Display, modify, backup, or restore ACLs for files and
+               directories.
+IF             Performs conditional processing in batch programs.
+LABEL          Creates, changes, or deletes the volume label of a disk.
+MD             Creates a directory.
+MKDIR          Creates a directory.
+MKLINK         Creates Symbolic Links and Hard Links
+MODE           Configures a system device.
+MORE           Displays output one screen at a time.
+MOVE           Moves one or more files from one directory to another
+               directory.
+OPENFILES      Displays files opened by remote users for a file share.
+PATH           Displays or sets a search path for executable files.
+PAUSE          Suspends processing of a batch file and displays a message.
+POPD           Restores the previous value of the current directory saved by
+               PUSHD.
+PRINT          Prints a text file.
+PROMPT         Changes the Windows command prompt.
+PUSHD          Saves the current directory then changes it.
+RD             Removes a directory.
+RECOVER        Recovers readable information from a bad or defective disk.
+REM            Records comments (remarks) in batch files or CONFIG.SYS.
+REN            Renames a file or files.
+RENAME         Renames a file or files.
+REPLACE        Replaces files.
+RMDIR          Removes a directory.
+ROBOCOPY       Advanced utility to copy files and directory trees
+SET            Displays, sets, or removes Windows environment variables.
+SETLOCAL       Begins localization of environment changes in a batch file.
+SC             Displays or configures services (background processes).
+SCHTASKS       Schedules commands and programs to run on a computer.
+SHIFT          Shifts the position of replaceable parameters in batch files.
+SHUTDOWN       Allows proper local or remote shutdown of machine.
+SORT           Sorts input.
+START          Starts a separate window to run a specified program or command.
+SUBST          Associates a path with a drive letter.
+SYSTEMINFO     Displays machine specific properties and configuration.
+TASKLIST       Displays all currently running tasks including services.
+TASKKILL       Kill or stop a running process or application.
+TIME           Displays or sets the system time.
+TITLE          Sets the window title for a CMD.EXE session.
+TREE           Graphically displays the directory structure of a drive or 
+               path.
+TYPE           Displays the contents of a text file.
+VER            Displays the Windows version.
+VERIFY         Tells Windows whether to verify that your files are written
+               correctly to a disk.
+VOL            Displays a disk volume label and serial number.
+XCOPY          Copies files and directory trees.
+WMIC           Displays WMI information inside interactive command shell.
+
+For more information on tools see the command-line reference in the online help.
+
+C:\Users\Tyra\quantico06>help > help.txt
+
+C:\Users\Tyra\quantico06>dir
+ Volume in drive C is Windows
+ Volume Serial Number is DCE9-E2BB
+
+ Directory of C:\Users\Tyra\quantico06
+
+2020-07-01  10:37 AM    <DIR>          .
+2020-07-01  10:37 AM    <DIR>          ..
+2020-07-01  10:37 AM             5,740 help.txt
+2020-07-01  10:32 AM    <DIR>          ISTA420
+               1 File(s)          5,740 bytes
+               3 Dir(s)  92,352,847,872 bytes free
+
+C:\Users\Tyra\quantico06>notepad help.txt
+
+C:\Users\Tyra\quantico06>notepad mylittlepony.txt
+
+C:\Users\Tyra\quantico06>type mylittlepony.txt
+This is a new file!
+C:\Users\Tyra\quantico06>del mylittlepony.txt
+
+C:\Users\Tyra\quantico06>cd ISTA420\labs
+
+C:\Users\Tyra\quantico06\ISTA420\labs>notepad lab00a-tyra.txt
+
+C:\Users\Tyra\quantico06\ISTA420\labs>

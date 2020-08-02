@@ -1,0 +1,46 @@
+.echo on
+.headers on
+
+-- Name: Tyra Oberholzer
+-- File: Pets.sql
+-- Date: July 5, 2020
+
+drop table if exists Pets;
+
+create table Pets (
+  Id int,
+  Name text,
+  Animal text,
+  Breed text,
+  Age int,
+  Color text,
+  Gender int
+);
+
+insert into Pets values (1,"Nakita","Dog","Eskimo Spitz",6,"White",0);
+insert into Pets values (2,"Heidi","Dog","St Bernard",4,"Brown",0);
+insert into Pets values (3,"Ella","Horse","Quarter Horse",13,"Bay",0);
+insert into Pets values (4,"Dallas","Horse","Quarter Horse",19,"Grey",0);
+insert into Pets values (5,"Tizzie","Cat","Long-Haired Domestic",2,"Grey Striped",0);
+
+select * from Pets;
+Id|Name|Animal|Breed|Age|Color|Gender
+1|Nakita|Dog|Eskimo Spitz|6|White|0
+2|Heidi|Dog|St Bernard|4|Brown|0
+3|Ella|Horse|Quarter Horse|13|Bay|0
+4|Dallas|Horse|Quarter Horse|19|Grey|0
+5|Tizzie|Cat|Long-Haired Domestic|2|Grey Striped|0
+select animal from Pets where Gender = 0;
+Animal
+Dog
+Dog
+Horse
+Horse
+Cat
+select * from Pets where Animal like "Horse";
+Id|Name|Animal|Breed|Age|Color|Gender
+3|Ella|Horse|Quarter Horse|13|Bay|0
+4|Dallas|Horse|Quarter Horse|19|Grey|0
+
+
+

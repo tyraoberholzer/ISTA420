@@ -1,0 +1,456 @@
+.headers on
+
+-- Name: Tyra oberholzer
+-- File: lab02b-Tyra.sql
+-- Date: July 89, 2020
+
+-- 1. Who are our customers in North America?
+
+select customerid, companyname, country from customers where country in ('USA', 'Mexico', 'Canada');
+CustomerID|CompanyName|Country
+ANATR|Ana Trujillo Emparedados y helados|Mexico
+ANTON|Antonio Moreno Taquería|Mexico
+BOTTM|Bottom-Dollar Markets|Canada
+CENTC|Centro comercial Moctezuma|Mexico
+GREAL|Great Lakes Food Market|USA
+HUNGC|Hungry Coyote Import Store|USA
+LAUGB|Laughing Bacchus Wine Cellars|Canada
+LAZYK|Lazy K Kountry Store|USA
+LETSS|Let''s Stop N Shop|USA
+LONEP|Lonesome Pine Restaurant|USA
+MEREP|Mère Paillarde|Canada
+OLDWO|Old World Delicatessen|USA
+PERIC|Pericles Comidas clásicas|Mexico
+RATTC|Rattlesnake Canyon Grocery|USA
+SAVEA|Save-a-lot Markets|USA
+SPLIR|Split Rail Beer & Ale|USA
+THEBI|The Big Cheese|USA
+THECR|The Cracker Box|USA
+TORTU|Tortuga Restaurante|Mexico
+TRAIH|Trail''s Head Gourmet Provisioners|USA
+WHITC|White Clover Markets|USA
+
+
+
+-- 2. What orders were placed in April, 1998?
+
+select orderid, orderdate from orders where orderdate like "1998-04-%";
+OrderID|OrderDate
+10990|1998-04-01
+10991|1998-04-01
+10992|1998-04-01
+10993|1998-04-01
+10994|1998-04-02
+10995|1998-04-02
+10996|1998-04-02
+10997|1998-04-03
+10998|1998-04-03
+10999|1998-04-03
+11000|1998-04-06
+11001|1998-04-06
+11002|1998-04-06
+11003|1998-04-06
+11004|1998-04-07
+11005|1998-04-07
+11006|1998-04-07
+11007|1998-04-08
+11008|1998-04-08
+11009|1998-04-08
+11010|1998-04-09
+11011|1998-04-09
+11012|1998-04-09
+11013|1998-04-09
+11014|1998-04-10
+11015|1998-04-10
+11016|1998-04-10
+11017|1998-04-13
+11018|1998-04-13
+11019|1998-04-13
+11020|1998-04-14
+11021|1998-04-14
+11022|1998-04-14
+11023|1998-04-14
+11024|1998-04-15
+11025|1998-04-15
+11026|1998-04-15
+11027|1998-04-16
+11028|1998-04-16
+11029|1998-04-16
+11030|1998-04-17
+11031|1998-04-17
+11032|1998-04-17
+11033|1998-04-17
+11034|1998-04-20
+11035|1998-04-20
+11036|1998-04-20
+11037|1998-04-21
+11038|1998-04-21
+11039|1998-04-21
+11040|1998-04-22
+11041|1998-04-22
+11042|1998-04-22
+11043|1998-04-22
+11044|1998-04-23
+11045|1998-04-23
+11046|1998-04-23
+11047|1998-04-24
+11048|1998-04-24
+11049|1998-04-24
+11050|1998-04-27
+11051|1998-04-27
+11052|1998-04-27
+11053|1998-04-27
+11054|1998-04-28
+11055|1998-04-28
+11056|1998-04-28
+11057|1998-04-29
+11058|1998-04-29
+11059|1998-04-29
+11060|1998-04-30
+11061|1998-04-30
+11062|1998-04-30
+11063|1998-04-30
+
+
+
+-- 3. What sauces do we sell?
+
+select productid, productname from products where productname like '%sauc%';
+ProductID|ProductName
+8|Northwoods Cranberry Sauce
+65|Louisiana Fiery Hot Pepper Sauce
+
+
+
+-- 4. You sellsome kind of dried fruit that I like very much what is its name?
+
+select productid, productname from products where productname like '%dried%';
+ProductID|ProductName
+7|Uncle Bob's Organic Dried Pears
+51|Manjimup Dried Apples
+
+
+
+-- 5. What employees ship products to Germany in December?
+
+select employeeid, orderdate, shipcountry from orders where orderdate like '%-12-%' and shipcountry like 'germany';
+EmployeeID|OrderDate|ShipCountry
+3|1996-12-23|Germany
+1|1996-12-27|Germany
+3|1997-12-04|Germany
+4|1997-12-05|Germany
+3|1997-12-10|Germany
+3|1997-12-16|Germany
+1|1997-12-22|Germany
+6|1997-12-23|Germany
+7|1997-12-25|Germany
+9|1997-12-26|Germany
+
+
+
+-- 6. We have an issue with product 19. I need to know the total amount and the 
+-- net amount of all orders for product 19 where the customer took a discount.
+
+select productid, sum(unitprice * quantity) as totat_amount, sum(discount) as total_discount, (sum(unitprice * quantity) - sum(discount)) as total_net from order_details where productid = 19;
+ProductID|totat_amount|total_discount|total_net
+19|6159.5|2.05|6157.45
+
+
+
+-- 7. I need a list of employees by title, first name, and last name, with the 
+-- employee's postion under their names, and a line separting each employee.
+
+select titleofcourtesy, firstname, lastname ||"
+"||
+title from employees;
+TitleOfCourtesy|FirstName|lastname ||"
+"||
+title
+Ms.|Nancy|Davolio
+Sales Representative
+Dr.|Andrew|Fuller
+Vice President-Sales
+Ms.|Janet|Leverling
+Sales Representative
+Mrs.|Margaret|Peacock
+Sales Representative
+Mr.|Steven|Buchanan
+Sales Manager
+Mr.|Michael|Suyama
+Sales Representative
+Mr.|Robert|King
+Sales Representative
+Ms.|Laura|Callahan
+Inside Sales Coordinator
+Ms.|Anne|Dodsworth
+Sales Representative
+
+
+
+-- 8. I need a list of our customers and the first name only of the customer 
+-- representative.
+
+select customerid, contactname from customers;
+CustomerID|ContactName
+-- CustomerID|ContactName
+ALFKI|Maria Anders
+ANATR|Ana Trujillo
+ANTON|Antonio Moreno
+AROUT|Thomas Hardy
+BERGS|Christina Berglund
+BLAUS|Hanna Moos
+BLONP|Frédérique Citeaux
+BOLID|Martín Sommer
+BONAP|Laurence Lebihan
+BOTTM|Elizabeth Lincoln
+BSBEV|Victoria Ashworth
+CACTU|Patricio Simpson
+CENTC|Francisco Chang
+CHOPS|Yang Wang
+COMMI|Pedro Afonso
+CONSH|Elizabeth Brown
+DRACD|Sven Ottlieb
+DUMON|Janine Labrune
+EASTC|Ann Devon
+ERNSH|Roland Mendel
+FAMIA|Aria Cruz
+FISSA|Diego Roel
+FOLIG|Martine Rancé
+FOLKO|Maria Larsson
+FRANK|Peter Franken
+FRANR|Carine Schmitt
+FRANS|Paolo Accorti
+FURIB|Lino Rodriguez
+GALED|Eduardo Saavedra
+GODOS|José Pedro Freyre
+GOURL|André Fonseca
+GREAL|Howard Snyder
+GROSR|Manuel Pereira
+HANAR|Mario Pontes
+HILAA|Carlos Hernández
+HUNGC|Yoshi Latimer
+HUNGO|Patricia McKenna
+ISLAT|Helen Bennett
+KOENE|Philip Cramer
+LACOR|Daniel Tonini
+LAMAI|Annette Roulet
+LAUGB|Yoshi Tannamuri
+LAZYK|John Steel
+LEHMS|Renate Messner
+LETSS|Jaime Yorres
+LILAS|Carlos González
+LINOD|Felipe Izquierdo
+LONEP|Fran Wilson
+MAGAA|Giovanni Rovelli
+MAISD|Catherine Dewey
+MEREP|Jean Fresnière
+MORGK|Alexander Feuer
+NORTS|Simon Crowther
+OCEAN|Yvonne Moncada
+OLDWO|Rene Phillips
+OTTIK|Henriette Pfalzheim
+PARIS|Marie Bertrand
+PERIC|Guillermo Fernández
+PICCO|Georg Pipps
+PRINI|Isabel de Castro
+QUEDE|Bernardo Batista
+QUEEN|Lúcia Carvalho
+QUICK|Horst Kloss
+RANCH|Sergio Gutiérrez
+RATTC|Paula Wilson
+REGGC|Maurizio Moroni
+RICAR|Janete Limeira
+RICSU|Michael Holz
+ROMEY|Alejandra Camino
+SANTG|Jonas Bergulfsen
+SAVEA|Jose Pavarotti
+SEVES|Hari Kumar
+SIMOB|Jytte Petersen
+SPECD|Dominique Perrier
+SPLIR|Art Braunschweiger
+SUPRD|Pascale Cartrain
+THEBI|Liz Nixon
+THECR|Liu Wong
+TOMSP|Karin Josephs
+TORTU|Miguel Angel Paolino
+TRADH|Anabela Domingues
+TRAIH|Helvetius Nagy
+VAFFE|Palle Ibsen
+VICTE|Mary Saveley
+VINET|Paul Henriot
+WANDK|Rita Müller
+WARTH|Pirkko Koskitalo
+WELLI|Paula Parente
+WHITC|Karl Jablonski
+WILMK|Matti Karttunen
+WOLZA|Zbyszek Piestrzeniewicz
+
+-- 9. Give me a list of our contacts alphabetically by last name.
+
+select substr(contactname, instr(contactname, " ") + 1) ||","|| substr(contactname, 1, instr(contactname, " ")) as last_name from customers order by last_name asc;
+last_name
+Accorti,Paolo 
+Afonso,Pedro 
+Anders,Maria 
+Angel Paolino,Miguel 
+Ashworth,Victoria 
+Batista,Bernardo 
+Bennett,Helen 
+Berglund,Christina 
+Bergulfsen,Jonas 
+Bertrand,Marie 
+Braunschweiger,Art 
+Brown,Elizabeth 
+Camino,Alejandra 
+Cartrain,Pascale 
+Carvalho,Lúcia 
+Chang,Francisco 
+Citeaux,Frédérique 
+ContactName,
+Cramer,Philip 
+Crowther,Simon 
+Cruz,Aria 
+Devon,Ann 
+Dewey,Catherine 
+Domingues,Anabela 
+Fernández,Guillermo 
+Feuer,Alexander 
+Fonseca,André 
+Franken,Peter 
+Fresnière,Jean 
+González,Carlos 
+Gutiérrez,Sergio 
+Hardy,Thomas 
+Henriot,Paul 
+Hernández,Carlos 
+Holz,Michael 
+Ibsen,Palle 
+Izquierdo,Felipe 
+Jablonski,Karl 
+Josephs,Karin 
+Karttunen,Matti 
+Kloss,Horst 
+Koskitalo,Pirkko 
+Kumar,Hari 
+Labrune,Janine 
+Larsson,Maria 
+Latimer,Yoshi 
+Lebihan,Laurence 
+Limeira,Janete 
+Lincoln,Elizabeth 
+McKenna,Patricia 
+Mendel,Roland 
+Messner,Renate 
+Moncada,Yvonne 
+Moos,Hanna 
+Moreno,Antonio 
+Moroni,Maurizio 
+Müller,Rita 
+Nagy,Helvetius 
+Nixon,Liz 
+Ottlieb,Sven 
+Parente,Paula 
+Pavarotti,Jose 
+Pedro Freyre,José 
+Pereira,Manuel 
+Perrier,Dominique 
+Petersen,Jytte 
+Pfalzheim,Henriette 
+Phillips,Rene 
+Piestrzeniewicz,Zbyszek 
+Pipps,Georg 
+Pontes,Mario 
+Rancé,Martine 
+Rodriguez,Lino 
+Roel,Diego 
+Roulet,Annette 
+Rovelli,Giovanni 
+Saavedra,Eduardo 
+Saveley,Mary 
+Schmitt,Carine 
+Simpson,Patricio 
+Snyder,Howard 
+Sommer,Martín 
+Steel,John 
+Tannamuri,Yoshi 
+Tonini,Daniel 
+Trujillo,Ana 
+Wang,Yang 
+Wilson,Fran 
+Wilson,Paula 
+Wong,Liu 
+Yorres,Jaime 
+de Castro,Isabel 
+
+
+
+-- 10. 'I need a report telling me the most common pairing of customers and employees 
+-- with the greatest order volume (by the number of orders placed). Exclude pairings with minimal orders.
+
+select customerid, employeeid, count(orderid) as volume from orders group by customerid, employeeid having count(orderid) > 3;
+CustomerID|EmployeeID|volume
+AROUT|4|4
+BERGS|1|4
+BERGS|3|6
+BONAP|4|4
+BOTTM|3|4
+ERNSH|1|5
+ERNSH|3|4
+ERNSH|4|5
+ERNSH|7|4
+ERNSH|8|4
+FOLKO|8|6
+FRANK|1|5
+FRANK|4|4
+GREAL|4|4
+HANAR|3|4
+HILAA|4|5
+HUNGO|3|5
+ISLAT|4|4
+KOENE|1|4
+KOENE|9|4
+LEHMS|3|4
+MEREP|3|4
+OTTIK|4|4
+QUICK|1|4
+QUICK|2|6
+QUICK|3|5
+QUICK|4|5
+QUICK|8|4
+RATTC|1|5
+RATTC|3|4
+SAVEA|1|6
+SAVEA|2|4
+SAVEA|4|4
+SAVEA|6|4
+SAVEA|8|4
+SUPRD|4|4
+TORTU|1|4
+VAFFE|1|4
+WANDK|8|4
+WARTH|8|4
+WHITC|4|4
+
+
+
+-- 11. I need a report listing the highest average selling product by product id. 
+-- The average is determined by the total sales of each product id divided by the 
+-- quantity of the product sold. Include only the highest 20 products.
+
+select productid, sum(unitprice * quantity) as total_price, sum(quantity) as total_quantity, (sum(unitprice * quantity) / sum(quantity)) as average from order_details group by productid limit 15;
+ProductID|total_price|total_quantity|average
+1|14277.6|828|17.2434782608696
+2|18559.2|1057|17.5583727530747
+3|3080.0|328|9.39024390243902
+4|9424.8|453|20.805298013245
+5|5801.15|298|19.4669463087248
+6|7345.0|301|24.4019933554817
+7|22464.0|763|29.4416775884666
+8|13760.0|372|36.989247311828
+9|8827.0|95|92.9157894736842
+10|22140.2|742|29.8385444743935
+11|13902.0|706|19.6912181303116
+12|12866.8|344|37.403488372093
+13|5234.4|891|5.87474747474747
+14|8630.4|404|21.3623762376238
+15|1813.5|122|14.8647540983607

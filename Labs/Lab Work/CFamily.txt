@@ -1,0 +1,49 @@
+.echo on
+.headers on
+
+-- Name: CFamily.sql
+-- Author: Tyra Oberholzer
+-- Date: July 3, 2020
+
+drop table if exists CFamily;
+
+create table CFamily (
+  id int,
+  name text,
+  sex int,
+  role text
+);
+
+insert into CFamily values (1,"Charles",1,"Parent");
+insert into CFamily values (2,"Bonnie",0,"Parent");
+insert into CFamily values (3,"Casie",0,"Child");
+insert into CFamily values (3,"Jackson",1,"Child");
+insert into CFamily values (4,"Max",1,"Pet");
+insert into CFamily values (5,"Midnight",0,"pet");
+
+.print ''
+
+select * from CFamily;
+id|name|sex|role
+1|Charles|1|Parent
+2|Bonnie|0|Parent
+3|Casie|0|Child
+3|Jackson|1|Child
+4|Max|1|Pet
+5|Midnight|0|pet
+select name, role from CFamily where sex = 1;
+name|role
+Charles|Parent
+Jackson|Child
+Max|Pet
+select id, sex from CFamily where role like "Pet";
+id|sex
+4|1
+5|0
+select * from CFamily where sex = 0;
+id|name|sex|role
+2|Bonnie|0|Parent
+3|Casie|0|Child
+5|Midnight|0|pet
+
+.exit
