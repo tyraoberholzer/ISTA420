@@ -1,0 +1,77 @@
+.headers on
+
+-- Name: Tyra Oberholzer
+-- File: TSQL-Quiz02.sql
+-- Date: July 9, 2020
+
+-- 1. How many seafood products do we have?
+
+select * from categories where categoryname like "seafood";
+CategoryID|CategoryName|Description|Picture
+8|Seafood|Seaweed and fish|
+
+
+
+-- 2. What are the names and IDs of our seafood products?
+
+select productname, categoryid from products where categoryid = 8;
+ProductName|CategoryID
+Ikura|8
+Konbu|8
+Carnarvon Tigers|8
+Nord-Ost Matjeshering|8
+Inlagd Sill|8
+Gravad lax|8
+Boston Crab Meat|8
+Jack's New England Clam Chowder|8
+Rogede sild|8
+Spegesild|8
+Escargots de Bourgogne|8
+Röd Kaviar|8
+
+
+
+-- 3. What is the average price of our seafood products?
+
+select categoryid, avg(unitprice) from products where categoryid = 8;
+CategoryID|avg(unitprice)
+8|20.6825
+
+
+
+-- 4. What is our highest priced seafood product, and how much does it cost?
+
+select productname, categoryid, max(unitprice) from products where categoryid = 8;
+ProductName|CategoryID|max(unitprice)
+Carnarvon Tigers|8|62.5
+
+
+
+-- 5. What is our lowest priced seafood product, and how much does it cost?
+
+select productname, categoryid, min(unitprice) from products where categoryid = 8;
+ProductName|CategoryID|min(unitprice)
+Konbu|8|6.0
+
+
+
+-- 6. How many customers do we have in Denmark?
+
+select count(*) from customers where country like "Denmark";
+count(*)
+2
+
+
+
+-- 7. What are the customer names and IDs of our Danish customers?
+
+select customerid, companyname, country from customers where country like "Denmark";
+CustomerID|CompanyName|Country
+SIMOB|Simons bistro|Denmark
+VAFFE|Vaffeljernet|Denmark
+
+
+
+-- 8. Which customers do NOT have a fax number?
+
+select customerid, contactname, fax from customers where fax is null;
